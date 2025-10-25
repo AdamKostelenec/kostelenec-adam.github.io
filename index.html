@@ -65,7 +65,30 @@
 
     <section id="kontakt" aria-labelledby="nadpis-kontakt" style="margin-top:2rem;">
       <h2 id="nadpis-kontakt">Kontakt</h2>
-      <p>Napiš na <a href="mailto:ahoj@example.com">ahoj@example.com</a></p>
+        <form id="contactForm" action="https://formspree.io/f/mzzkbzzw" method="POST">
+          <div class="field">
+                <label for="name">Jméno</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+
+              <div class="field">
+                <label for="message">Zpráva</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+
+              <div class="hp" aria-hidden="true">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <button class="btn" type="submit">Odeslat</button>
+              <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+            </form>   
     </section>
   </main>
 
