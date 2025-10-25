@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moje lehká stránka</title>
-  <meta name="description" content="Minimalistická ukázková stránka." />
+  <title>Adam Kostelenec</title>
+  <meta name="description" content="Stránka Adama Kostelence" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,9 @@
         <a href="#o-mne">O mně</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
-      <button class="btn" id="themeToggle" aria-label="Přepnout téma">🌓</button>
+      <button class="btn" id="themeToggle" aria-label="Přepnout téma">
+        <img src="icon" alt="Ikona tématu" class="theme-icon"/>
+      </button>
     </div>
   </header>
 
@@ -73,22 +75,36 @@
     </div>
   </footer>
 
-  <script>
-    // rok ve footeru
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // přepínač světlý/tmavý
-    const root = document.documentElement;
-    const btn = document.getElementById('themeToggle');
-    const stored = localStorage.getItem('theme');
-    if (stored) root.setAttribute('data-theme', stored);
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  const icon = document.querySelector('.theme-icon');
+  const stored = localStorage.getItem('theme');
 
-    btn.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      if (next === 'light') root.removeAttribute('data-theme');
-      else root.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', next);
-    });
-  </script>
+
+  if (stored === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    icon.src = 'dark.png';
+  } else {
+    icon.src = 'light.png';
+  }
+
+  btn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+
+    if (next === 'light') {
+      root.setAttribute('data-theme', 'light');
+      icon.src = 'light.png';
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      icon.src = 'dark.png'; 
+    }
+
+    localStorage.setItem('theme', next);
+  });
+</script>
 </body>
 </html>
