@@ -19,7 +19,7 @@
         <a href="#kontakt">Kontakt</a>
       </nav>
       <button class="btn" id="themeToggle" aria-label="Přepnout téma">
-        <img src="icon" alt="Ikona tématu" class="theme-icon"/>
+        <img src="light.png" alt="Ikona tématu" class="theme-icon"/>
       </button>
     </div>
   </header>
@@ -76,35 +76,36 @@
   </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  const icon = document.querySelector('.theme-icon');
-  const stored = localStorage.getItem('theme');
+const root  = document.documentElement;
+const btn   = document.getElementById('themeToggle');
+const icon  = document.querySelector('.theme-icon');
+const stored = localStorage.getItem('theme'); // 'dark' | 'light' | null
 
+// Inicializace
+if (stored === 'dark') {
+  root.setAttribute('data-theme', 'dark');
+  icon.src = 'dark.png';
+} else {
+  root.removeAttribute('data-theme');  // ← důležité pro světlo
+  icon.src = 'light.png';
+}
 
-  if (stored === 'dark') {
+btn.addEventListener('click', () => {
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+
+  if (next === 'dark') {
     root.setAttribute('data-theme', 'dark');
     icon.src = 'dark.png';
   } else {
+    root.removeAttribute('data-theme'); // ← nedávat "light"
     icon.src = 'light.png';
   }
 
-  btn.addEventListener('click', () => {
-    const isDark = root.getAttribute('data-theme') === 'dark';
-    const next = isDark ? 'light' : 'dark';
-
-    if (next === 'light') {
-      root.setAttribute('data-theme', 'light');
-      icon.src = 'light.png';
-    } else {
-      root.setAttribute('data-theme', 'dark');
-      icon.src = 'dark.png'; 
-    }
-
-    localStorage.setItem('theme', next);
-  });
+  localStorage.setItem('theme', next);
+});
 </script>
 </body>
 </html>
