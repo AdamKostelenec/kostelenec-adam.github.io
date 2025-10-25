@@ -65,7 +65,7 @@
 
     <section id="kontakt" aria-labelledby="nadpis-kontakt" style="margin-top:2rem;">
       <h2 id="nadpis-kontakt">Kontakt</h2>
-        <form id="contactForm" action="https://formspree.io/f/mzzkbzzw" method="POST">
+        <form id="contactForm" action="send.php" method="POST">
           <div class="field">
                 <label for="name">Jméno</label>
                 <input id="name" name="name" type="text" required autocomplete="name" />
@@ -128,6 +128,38 @@ btn.addEventListener('click', () => {
   }
 
   localStorage.setItem('theme', next);
+
+  
+});
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  statusEl.textContent = 'Odesílám…';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form)
+    });
+    const data = await res.json().catch(() => ({}));
+
+    if (res.ok && data.ok) {
+      form.reset();
+      statusEl.textContent = 'Děkuji, zpráva byla odeslána.';
+    } else {
+      statusEl.textContent = data.error || 'Nepodařilo se odeslat. Zkuste to prosím později.';
+    }
+  } catch {
+    statusEl.textContent = 'Chyba připojení.';
+  } finally {
+    btn.disabled = false;
+  }
 });
 </script>
 </body>
