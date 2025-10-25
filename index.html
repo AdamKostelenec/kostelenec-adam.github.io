@@ -81,14 +81,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const root  = document.documentElement;
 const btn   = document.getElementById('themeToggle');
 const icon  = document.querySelector('.theme-icon');
-const stored = localStorage.getItem('theme'); // 'dark' | 'light' | null
+const stored = localStorage.getItem('theme'); 
 
 // Inicializace
 if (stored === 'dark') {
   root.setAttribute('data-theme', 'dark');
   icon.src = 'dark.png';
 } else {
-  root.removeAttribute('data-theme');  // ← důležité pro světlo
+  root.removeAttribute('data-theme');  
   icon.src = 'light.png';
 }
 
@@ -100,7 +100,7 @@ btn.addEventListener('click', () => {
     root.setAttribute('data-theme', 'dark');
     icon.src = 'dark.png';
   } else {
-    root.removeAttribute('data-theme'); // ← nedávat "light"
+    root.removeAttribute('data-theme'); 
     icon.src = 'light.png';
   }
 
