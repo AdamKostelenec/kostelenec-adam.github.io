@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adam Kostelenec</title>
+  <meta name="description" content="Stránka Adama Kostelence" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Michroma&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <!--<strong>Kostelenec Adam</strong> -->
+      <nav aria-label="Hlavní navigace">
+        <a href="/#o-mne" target="_self">O mně</a>
+        <a href="/#kontakt" target="_self">Kontakt</a>
+        <a href="/#projekty" target="_self">Projekty</a>
+        <a href="zivotopis.html" target="_self" rel="noopener">Životopis</a>
+      </nav>
+      <button class="btn" id="themeToggle" aria-label="Přepnout téma">
+        <img src="light.png" alt="Ikona tématu" class="theme-icon"/>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Životopis</h1>
+      <p class="muted"><strong>Adam Kostelenec</strong></p>
+    </section>
+
+    <section>
+      <h2>Profil</h2>
+      <p>Student Informačních technologií na VŠB – Technické univerzitě Ostrava se
+         zaměřením na vývoj software, webových aplikací a automatizačních nástrojů.</p>
+         <hr>
+    </section>
+
+    <section>
+      <h2>Pracovní zkušenosti</h2>
+      <ul>
+        <li><strong>NANO Systems s.r.o.</strong> – Programátor (C#, Shoptet API)</li>
+        <li><strong>Gamisport – Jeans s.r.o.</strong> – Technická správa e-shopu a marketing</li>
+      </ul>
+      <hr>
+    </section>
+
+    <section>
+      <h2>Vzdělání</h2>
+      <ul>
+        <li><strong>VŠB – TUO</strong>, Informační technologie</li>
+      </ul>
+      <hr>
+    </section>
+
+    <section>
+      <h2>Dovednosti</h2>
+      <ul>
+        <li>Vývoj v C# (.NET)</li>
+        <li>REST API, XML</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Webová automatizace a integrace</li>
+      </ul>
+    </section>
+  </main>
+
+<footer class="container">
+      <section class="soc" id="socials">
+        <h2>Najdete mě na</h2>
+        <ul class="socials">
+          <li><a href="https://github.com/AdamKostelenec" aria-label="GitHub" target="_blank" rel="noopener"></a></li>
+          <li><a href="https://www.linkedin.com/in/adamkostelenec/" aria-label="LinkedIn" target="_blank" rel="noopener"></a></li>
+          <li><a href="https://www.instagram.com/_kostelenec_adam_/" aria-label="Instagram" target="_blank" rel="noopener"></a></li>
+        </ul>
+      </section>
+    <div style="text-align:center;margin-top:1rem;">
+      <small class="muted">© <span id="year"></span> Adam Kostelenec</small>
+    </div>
+  </footer>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const root = document.documentElement;
+const btn = document.getElementById('themeToggle');
+const icon = document.querySelector('.theme-icon');
+const stored = localStorage.getItem('theme');
+
+if (stored === 'dark') {
+  root.setAttribute('data-theme', 'dark');
+  icon.src = 'dark.png';
+} else {
+  root.removeAttribute('data-theme');
+  icon.src = 'light.png';
+}
+
+btn.addEventListener('click', () => {
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  
+  if (next === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    icon.src = 'dark.png';
+  } else {
+    root.removeAttribute('data-theme');
+    icon.src = 'light.png';
+  }
+  
+  localStorage.setItem('theme', next);
+});
+</script>
+
+</body>
+</html>

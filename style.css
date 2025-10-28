@@ -78,8 +78,8 @@
       background-image: url('linkedin.png');
     }
     .socials li a[aria-label="Instagram"] {
-      background-image: url('Instagram.png');
+      background-image: url('instagram.png');
     }
     :root[data-theme="dark"] .socials li a[aria-label="GitHub"] {background-image: url('github-dark.png');}
     :root[data-theme="dark"] .socials li a[aria-label="LinkedIn"] {background-image: url('linkedin-dark.png');}
-    :root[data-theme="dark"] .socials li a[aria-label="Instagram"] {background-image: url('Instagram-dark.png');}
+    :root[data-theme="dark"] .socials li a[aria-label="Instagram"] {background-image: url('instagram-dark.png');}
