@@ -41,33 +41,33 @@
       <hr>
     </section>
     <section id="o-mne" aria-labelledby="nadpis-omne" style="margin-top:2rem;">
-      <h2 id="nadpis-omne">O mně</h2>
-       <p>Jmenuji se <strong>Adam Kostelenec</strong> a jsem student Fakulty elektrotechniky a informatiky na <strong>VŠB – Technické univerzitě Ostrava</strong>, kde studuji obor <strong>Informační technologie</strong>.</p>
+    <h2 id="nadpis-omne">O mně</h2>
+    <p>Jmenuji se <strong>Adam Kostelenec</strong> a jsem student Fakulty elektrotechniky a informatiky na <strong>VŠB – Technické univerzitě Ostrava</strong>, kde studuji obor <strong>Informační technologie</strong>.</p>
 
-  <p>Už několik let se věnuji vývoji softwaru a webových řešení – od drobných nástrojů pro automatizaci až po plnohodnotné webové aplikace.</p>
+    <p>Už několik let se věnuji vývoji softwaru a webových řešení – od drobných nástrojů pro automatizaci až po plnohodnotné webové aplikace.</p>
 
-  <p>V současnosti působím jako <strong>programátor ve společnosti NANO Systems s.r.o.</strong>, kde zodpovídám za kompletní vývoj aplikací pro e-commerce platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong>.</p>
+    <p>V současnosti působím jako <strong>programátor ve společnosti NANO Systems s.r.o.</strong>, kde zodpovídám za kompletní vývoj aplikací pro e-commerce platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong>.</p>
 
-  <ul>
-    <li>integrace dat pomocí <strong>REST API</strong>,</li>
-    <li>zpracování <strong>XML feedů</strong> a jejich transformace,</li>
-    <li>návrh a implementace backendových služeb,</li>
-    <li>úpravy šablon e-shopů (HTML, CSS, JavaScript),</li>
-    <li>vývoj interních aplikací pro automatizaci procesů.</li>
-  </ul>
+    <ul>
+      <li>integrace dat pomocí <strong>REST API</strong>,</li>
+      <li>zpracování <strong>XML feedů</strong> a jejich transformace,</li>
+      <li>návrh a implementace backendových služeb,</li>
+      <li>úpravy šablon e-shopů (HTML, CSS, JavaScript),</li>
+      <li>vývoj interních aplikací pro automatizaci procesů.</li>
+    </ul>
 
-  <p>V minulosti jsem působil také ve společnosti <strong>Gamisport – Jeans s.r.o.</strong>, kde jsem převzal vedení e-shopové části firmy a získal zkušenosti s technickým řízením e-shopu, marketingem i obchodní komunikací.</p>
+    <p>V minulosti jsem působil také ve společnosti <strong>Gamisport – Jeans s.r.o.</strong>, kde jsem převzal vedení e-shopové části firmy a získal zkušenosti s technickým řízením e-shopu, marketingem i obchodní komunikací.</p>
 
-  <p>V poslední době se intenzivně zaměřuji na <strong>tvorbu moderních webových stránek</strong> – čistých, responzivních a optimalizovaných pro rychlost i použitelnost. Baví mě kombinovat technickou preciznost s vizuálním designem a tvořit weby, které jsou nejen funkční, ale i příjemné pro uživatele.</p>
+    <p>V poslední době se intenzivně zaměřuji na <strong>tvorbu moderních webových stránek</strong> – čistých, responzivních a optimalizovaných pro rychlost i použitelnost. Baví mě kombinovat technickou preciznost s vizuálním designem a tvořit weby, které jsou nejen funkční, ale i příjemné pro uživatele.</p>
 
-  <p>Věřím, že dobrý vývojář by měl rozumět nejen kódu, ale i lidem, kteří jeho práci používají. Proto se snažím přemýšlet o projektech v širších souvislostech – od uživatelského zážitku přes výkon až po údržbu a rozšiřitelnost.</p>
+    <p>Věřím, že dobrý vývojář by měl rozumět nejen kódu, ale i lidem, kteří jeho práci používají. Proto se snažím přemýšlet o projektech v širších souvislostech – od uživatelského zážitku přes výkon až po údržbu a rozšiřitelnost.</p>
 
-  <p>Aktuálně se učím pokročilejší webové technologie, jako jsou <strong>JavaScript frameworky (React, Vue)</strong>, a dále rozvíjím své znalosti backendu v <strong>.NET</strong>.</p>
+    <p>Aktuálně se učím pokročilejší webové technologie, jako jsou <strong>JavaScript frameworky (React, Vue)</strong>, a dále rozvíjím své znalosti backendu v <strong>.NET</strong>.</p>
 
-  <hr>
-  <p><strong>Shrnutí:</strong> Propojuji analytické myšlení s citem pro detail, rád vysvětluji složité věci jednoduše a největší radost mám, když moje řešení někomu skutečně usnadní práci.</p>
-  <hr>
-</section>
+    <hr>
+    <p><strong>Shrnutí:</strong> Propojuji analytické myšlení s citem pro detail, rád vysvětluji složité věci jednoduše a největší radost mám, když moje řešení někomu skutečně usnadní práci.</p>
+    <hr>
+  </section>
 
     <section id="kontakt" aria-labelledby="nadpis-kontakt" style="margin-top:2rem;">
       <h2 id="nadpis-kontakt">Kontakt</h2>
@@ -91,13 +91,11 @@
                 <label for="company">Company</label>
                 <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
               </div>
-
               <button class="btn" type="submit">Odeslat</button>
               <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
             </form>   
     </section>
   </main>
-
   <footer class="container">
       <section class="soc" id="socials">
         <h2>Najdete mě na</h2>
@@ -111,70 +109,69 @@
       <small class="muted">© <span id="year"></span> Adam Kostelenec</small>
     </div>
   </footer>
-
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-const root  = document.documentElement;
-const btn   = document.getElementById('themeToggle');
-const icon  = document.querySelector('.theme-icon');
-const stored = localStorage.getItem('theme'); 
+    const root  = document.documentElement;
+    const btn   = document.getElementById('themeToggle');
+    const icon  = document.querySelector('.theme-icon');
+    const stored = localStorage.getItem('theme'); 
 
-// Inicializace
-if (stored === 'dark') {
-  root.setAttribute('data-theme', 'dark');
-  icon.src = 'dark.png';
-} else {
-  root.removeAttribute('data-theme');  
-  icon.src = 'light.png';
-}
-
-btn.addEventListener('click', () => {
-  const isDark = root.getAttribute('data-theme') === 'dark';
-  const next = isDark ? 'light' : 'dark';
-
-  if (next === 'dark') {
-    root.setAttribute('data-theme', 'dark');
-    icon.src = 'dark.png';
-  } else {
-    root.removeAttribute('data-theme'); 
-    icon.src = 'light.png';
-  }
-
-  localStorage.setItem('theme', next);
-
-  
-});
-const form = document.getElementById('contactForm');
-const statusEl = document.getElementById('formStatus');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  if (!form.reportValidity()) return;
-
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  statusEl.textContent = 'Odesílám…';
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form)
-    });
-    const data = await res.json().catch(() => ({}));
-
-    if (res.ok && data.ok) {
-      form.reset();
-      statusEl.textContent = 'Děkuji, zpráva byla odeslána.';
+    // Inicializace
+    if (stored === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      icon.src = 'dark.png';
     } else {
-      statusEl.textContent = data.error || 'Nepodařilo se odeslat. Zkuste to prosím později.';
+      root.removeAttribute('data-theme');  
+      icon.src = 'light.png';
     }
-  } catch {
-    statusEl.textContent = 'Chyba připojení.';
-  } finally {
-    btn.disabled = false;
-  }
-});
+
+    btn.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+
+      if (next === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        icon.src = 'dark.png';
+      } else {
+        root.removeAttribute('data-theme'); 
+        icon.src = 'light.png';
+      }
+
+      localStorage.setItem('theme', next);
+
+      
+    });
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      statusEl.textContent = 'Odesílám…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.ok) {
+          form.reset();
+          statusEl.textContent = 'Děkuji, zpráva byla odeslána.';
+        } else {
+          statusEl.textContent = data.error || 'Nepodařilo se odeslat. Zkuste to prosím později.';
+        }
+      } catch {
+        statusEl.textContent = 'Chyba připojení.';
+      } finally {
+        btn.disabled = false;
+      }
+    });
 </script>
 </body>
 </html>
