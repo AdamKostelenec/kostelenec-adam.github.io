@@ -36,7 +36,6 @@
       color: var(--fg);
     }
     main p { margin: .5rem 0 1rem; }
-    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .card { padding: 1rem; border: 1px solid rgba(127,127,127,.2); border-radius: 10px; background: var(--bg); }
 
     .field { margin-bottom: 1rem; }
@@ -52,4 +51,34 @@
     input:focus, textarea:focus { outline: 2px solid rgba(127,127,127,.35); }
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
-
+    .socials{
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: .5rem 0 2rem;
+    }
+    .socials li a{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .socials li a:hover {
+      opacity: 1;
+    }
+ .socials li a[aria-label="GitHub"] {
+      background-image: url('github.png');
+    }
+    .socials li a[aria-label="LinkedIn"] {
+      background-image: url('linkedin.png');
+    }
+    .socials li a[aria-label="Instagram"] {
+      background-image: url('Instagram.png');
+    }
+    :root[data-theme="dark"] .socials li a[aria-label="GitHub"] {background-image: url('github-dark.png');}
+    :root[data-theme="dark"] .socials li a[aria-label="LinkedIn"] {background-image: url('linkedin-dark.png');}
+    :root[data-theme="dark"] .socials li a[aria-label="Instagram"] {background-image: url('Instagram-dark.png');}
