@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adam Kostelenec</title>
+  <meta name="description" content="Stránka Adama Kostelence" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Michroma&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <!--<strong>Kostelenec Adam</strong> -->
+      <nav aria-label="Hlavní navigace">
+        <a href="/#o-mne" target="_self">O mně</a>
+        <a href="/#kontakt" target="_self">Kontakt</a>
+        <a href="/#projekty" target="_self">Projekty</a>
+        <a href="/zivotopis" target="_self" rel="noopener">Životopis</a>
+      </nav>
+      <button class="btn" id="themeToggle" aria-label="Přepnout téma">
+        <img src="../light.png" alt="Ikona tématu" class="theme-icon"/>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Životopis</h1>
+      <p class="muted"><strong>Adam Kostelenec</strong> · Hrádek, Moravskoslezský kraj</p>
+    </section>
+
+    <section aria-labelledby="profil">
+      <h2 id="profil">Profil</h2>
+      <p>Student oboru Informační technologie na <strong>VŠB – Technické univerzitě Ostrava.</strong> Zaměřuji se na vývoj softwaru, webových řešení a automatizačních nástrojů. V praxi kombinuji technickou preciznost s důrazem na uživatelskou přívětivost a dlouhodobou udržitelnost. Primárně pracuji v <strong>C# (.NET)</strong> a v e-commerce integracích.</p>
+      <hr>
+    </section>
+
+    <section aria-labelledby="zkusenosti">
+      <h2 id="zkusenosti">Pracovní zkušenosti</h2>
+
+      <div class="card">
+        <strong>NANO Systems s.r.o.</strong> · Programátor softwaru<br>
+        <small class="muted">07/2024 – současnost · Třinec</small>
+        <ul>
+          <li>Kompletní vývoj aplikací pro platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong> od návrhu po nasazení.</li>
+          <li>Kompletní vývoj <strong>překladače XML feedů</strong> do cizích jazyků.</li>
+          <li>Práce s <strong>XML</strong> daty e-shopů (parsování, validace, transformace) a vývoj překladače XML feedů do cizích jazyků.</li>
+          <li>Integrace služeb přes <strong>REST API</strong>, úpravy šablon (CSS, JavaScript).</li>
+          <li>Automatizační nástroje: přepočty cen, výpočet DPH/VAT, další interní utility.</li>
+          <li>Dlouhodobá údržba a optimalizace s důrazem na spolehlivost a škálování.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Gamisport – Jeans s.r.o.</strong> · Vedoucí e-shopové části firmy (E-commerce & Shoptet)<br>
+        <small class="muted">06/2023 – 07/2024 · Třinec</small>
+        <ul>
+          <li>Správa a rozvoj e-shopu na platformě <strong>Shoptet</strong>, SEO a online marketing.</li>
+          <li>Vyjednávání s partnery a dodavateli, uzavírání obchodních dohod, vedení týmu.</li>
+          <li>Spoluzodpovědnost za migraci portfolia cca <strong>40 000 produktů</strong>.</li>
+        </ul>
+      </div>
+      <hr>
+    </section>
+
+    <section aria-labelledby="vzdelani">
+      <h2 id="vzdelani">Vzdělání</h2>
+      <ul>
+        <li><strong>VŠB – Technická univerzita Ostrava</strong> · Bc., Informační technologie · 2023–2026 (probíhá)</li>
+        <li><strong>Střední průmyslová škola Karviná</strong> · Informační technologie · 2019–2023 · Zakončeno maturitní zkouškou</li>
+      </ul>
+      <hr>
+    </section>
+
+    <section aria-labelledby="dovednosti">
+      <h2 id="dovednosti">Dovednosti</h2>
+      <ul>
+        <li><strong>C# (.NET)</strong>, návrh a implementace backendových služeb</li>
+        <li><strong>REST API</strong>, práce s <strong>XML</strong>, integrace systémů</li>
+        <li><strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, úpravy šablon e-shopů</li>
+        <li>Automatizace procesů, optimalizace a údržba aplikací</li>
+        <li>Základy SEO, e-commerce procesy</li>
+      </ul>
+      <hr>
+    </section>
+  </main>
+
+<footer class="container">
+      <section class="soc" id="socials">
+        <h2>Najdete mě na</h2>
+        <ul class="socials">
+          <li><a href="https://github.com/AdamKostelenec" aria-label="GitHub" target="_blank" rel="noopener"></a></li>
+          <li><a href="https://www.linkedin.com/in/adamkostelenec/" aria-label="LinkedIn" target="_blank" rel="noopener"></a></li>
+          <li><a href="https://www.instagram.com/_kostelenec_adam_/" aria-label="Instagram" target="_blank" rel="noopener"></a></li>
+        </ul>
+      </section>
+    <div style="text-align:center;margin-top:1rem;">
+      <small class="muted">© <span id="year"></span> Adam Kostelenec</small>
+    </div>
+  </footer>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const root = document.documentElement;
+const btn = document.getElementById('themeToggle');
+const icon = document.querySelector('.theme-icon');
+const stored = localStorage.getItem('theme');
+
+if (stored === 'dark') {
+  root.setAttribute('data-theme', 'dark');
+  icon.src = '../dark.png';
+} else {
+  root.removeAttribute('data-theme');
+  icon.src = '../light.png';
+}
+
+btn.addEventListener('click', () => {
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  
+  if (next === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    icon.src = '../dark.png';
+  } else {
+    root.removeAttribute('data-theme');
+    icon.src = '../light.png';
+  }
+  
+  localStorage.setItem('theme', next);
+});
+</script>
+
+</body>
+</html>
