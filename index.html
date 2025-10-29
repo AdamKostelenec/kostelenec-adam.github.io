@@ -21,7 +21,7 @@
         <a href="#projekty">Projekty</a>
         <a href="/zivotopis" target="_self">Životopis</a>
       </nav>
-      <button class="btn" id="themeToggle" aria-label="Přepnout téma">
+      <button class="lbtn" id="themeToggle" aria-label="Přepnout téma">
         <img src="light.png" alt="Ikona tématu" class="theme-icon"/>
       </button>
     </div>
@@ -33,10 +33,37 @@
       <h1>Adam Kostelenec</h1>
     </div>
 
-    <section id="projekty" aria-labelledby="nadpis-projekty" style="margin-top:2rem;">
-      <h2 id="nadpis-projekty">Projekty</h2>
-      <hr>
-    </section>
+      <section id="projekty" aria-labelledby="nadpis-projekty" style="margin-top:2rem;">
+        <h2 id="nadpis-projekty">Projekty</h2>
+
+        <div class="projekty-grid">
+
+          <div class="card projekt">
+            <h3>Shoptet XML Translator</h3>
+            <small class="muted">C# · .NET · REST API · XML · 2024</small>
+            <p>Nástroj pro automatizovaný překlad produktových XML feedů do cizích jazyků...</p>
+            <a href="#" class="btn">Zobrazit</a>
+          </div>
+
+          <div class="card projekt">
+            <h3>Automatizace cen</h3>
+            <small class="muted">C# · .NET · Shoptet API · 2024</small>
+            <p>Interní nástroj pro přepočet cen, DPH a export do e-shopu Shoptet.</p>
+            <a href="#" class="btn">Zobrazit</a>
+          </div>
+
+          <div class="card projekt">
+            <h3>Portfolio web</h3>
+            <small class="muted">HTML · CSS · JavaScript · 2025</small>
+            <p>Osobní portfolio web zaměřený na čistý design, rychlost a přístupnost.</p>
+            <a href="#" class="btn">Zobrazit</a>
+          </div>
+
+        </div>
+        <hr>
+
+      </section>
+
     <section id="o-mne" aria-labelledby="nadpis-omne" style="margin-top:2rem;">
     <h2 id="nadpis-omne">O mně</h2>
     <p>Jmenuji se <strong>Adam Kostelenec</strong> a jsem student Fakulty elektrotechniky a informatiky na <strong>VŠB – Technické univerzitě Ostrava</strong>, kde studuji obor <strong>Informační technologie</strong>.</p>

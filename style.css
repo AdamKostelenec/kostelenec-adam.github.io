@@ -1,5 +1,5 @@
-    :root { --bg: #faedcd; --fg: #1f2937; --muted:#6b7280; --card:#e6d6b7; }
-    :root[data-theme="dark"] { --bg:#0b0f14; --fg:#e5e7eb; --muted:#9ca3af; --card:#111827; }
+    :root { --bg: #faedcd; --fg: #1f2937; --muted:#6b7280; --card:#e6d6b7;--tx:#e5e7eb; }
+    :root[data-theme="dark"] { --bg:#0b0f14; --fg:#e5e7eb; --muted:#9ca3af; --card:#111827; --tx:#0b0f14 }
     * { box-sizing: border-box; }
     body {
       margin: 0; font-family: 'Inconsolata', -apple-system, Segoe UI, Roboto, sans-serif;
@@ -30,11 +30,48 @@
       margin-right: .75rem; text-decoration: none; color: inherit; opacity: .8;
     }
     nav a:hover { opacity: 1; }
-    .btn {
+    .lbtn {
       display: inline-block; padding: .6rem .9rem; border-radius: 8px;
       border: 1px solid rgba(127,127,127,.3); background: transparent; cursor: pointer;
       color: var(--fg);
     }
+
+      a.btn,
+      button.btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font: inherit;
+        font-size: 0.9rem;
+        text-decoration: none;
+        padding: .6rem .9rem;           
+        border-radius: 8px;
+        border: 1px solid rgba(127,127,127,.3);
+        background: transparent;      
+        color: var(--fg);
+        cursor: pointer;
+        transition: background .2s, color .2s;
+        -webkit-appearance: none;
+        appearance: none;
+        line-height: 1.2;
+      }
+
+      a.btn:hover,
+      button.btn:hover {
+        background: var(--fg);
+        color: var(--bg);
+      }
+
+      a.btn:focus-visible,
+      button.btn:focus-visible {
+        outline: 2px solid rgba(127,127,127,.35);
+        outline-offset: 2px;
+      }
+
+      button.btn:disabled {
+        opacity: .6;
+        cursor: not-allowed;
+      }
+
     main p { margin: .5rem 0 1rem; }
     .card { padding: 1rem; border: 1px solid rgba(127,127,127,.2); border-radius: 10px; background: var(--bg);margin-bottom:1rem; }
 
@@ -83,3 +120,38 @@
     :root[data-theme="dark"] .socials li a[aria-label="GitHub"] {background-image: url('github-dark.png');}
     :root[data-theme="dark"] .socials li a[aria-label="LinkedIn"] {background-image: url('linkedin-dark.png');}
     :root[data-theme="dark"] .socials li a[aria-label="Instagram"] {background-image: url('instagram-dark.png');}
+
+
+.projekty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.projekt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projekt h3 {
+  margin-top: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.projekt p {
+  flex-grow: 1;
+}
+
+.projekt a.btn {
+  align-self: flex-start;
+  padding: .4rem .8rem;
+  border-radius: 6px;
+}
+
+.projekt a.btn:hover {
+  background: var(--fg);
+  color: var(--tx);
+}
