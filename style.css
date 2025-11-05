@@ -35,42 +35,16 @@
       border: 1px solid rgba(127,127,127,.3); background: transparent; cursor: pointer;
       color: var(--fg);
     }
+  .btn {
+    display: inline-block;
+    padding: .6rem .9rem;
+    border-radius: 8px;
+    border: 1px solid rgba(127,127,127,.3);
+    background: transparent;
+    cursor: pointer;
+    color: var(--fg);
+  }
 
-      a.btn,
-      button.btn {
-        display: inline-block;
-        margin-top: 0.5rem;
-        font: inherit;
-        font-size: 0.9rem;
-        text-decoration: none;
-        padding: .6rem .9rem;           
-        border-radius: 8px;
-        border: 1px solid rgba(127,127,127,.3);
-        background: transparent;      
-        color: var(--fg);
-        cursor: pointer;
-        transition: background .2s, color .2s;
-        -webkit-appearance: none;
-        appearance: none;
-        line-height: 1.2;
-      }
-
-      a.btn:hover,
-      button.btn:hover {
-        background: var(--fg);
-        color: var(--bg);
-      }
-
-      a.btn:focus-visible,
-      button.btn:focus-visible {
-        outline: 2px solid rgba(127,127,127,.35);
-        outline-offset: 2px;
-      }
-
-      button.btn:disabled {
-        opacity: .6;
-        cursor: not-allowed;
-      }
 
     main p { margin: .5rem 0 1rem; }
     .card { padding: 1rem; border: 1px solid rgba(127,127,127,.2); border-radius: 10px; background: var(--bg);margin-bottom:1rem; }
@@ -124,10 +98,13 @@
 
 .projekty-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
+@media (min-width: 900px) {
+  .projekty-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 
 .projekt {
   display: flex;
@@ -147,11 +124,38 @@
 
 .projekt a.btn {
   align-self: flex-start;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid rgba(127,127,127,.3);
   padding: .4rem .8rem;
   border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
+
 
 .projekt a.btn:hover {
   background: var(--fg);
   color: var(--tx);
+}
+
+
+.obtn {
+  display: inline-block;
+  padding: .6rem .9rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid rgba(127,127,127,.3);
+  border-radius: 6px;
+  background: transparent;      /* transparentní pozadí */
+  color: var(--fg);             /* text podle aktuálního tématu */
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.obtn:hover {
+  background: var(--fg);        /* při hoveru se obrátí barvy */
+  color: var(--tx);
+  border-color: var(--fg);
 }

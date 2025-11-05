@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DJ Garage - prémiový autoservis pro náročné. Opravy, diagnostika, údržba.">
+    <link rel="stylesheet" href="../djgarage/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Michroma&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>DJ Garage – Prémiový autoservis</title>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">
+                <span class="brand-mark">DJ</span>
+                <span class="brand-text">Garage</span>
+            </div>
+            <nav aria-label="Hlavní navigace" class="main-nav">
+                <a href="#sluzby">Služby</a>
+                <a href="#cenik">Ceník</a>
+                <a href="#o-nas">O nás</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+            <button class="btn-icon" id="themeToggle" aria-label="Přepnout téma">
+                <!-- sun -->
+                <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                    <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.25a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1zm0 11.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm7-3.5a1 1 0 0 1 1 1v.25a1 1 0 1 1-2 0V13a1 1 0 0 1 1-1zM12 17a1 1 0 0 1 1 1v1.25a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1zM6 12a1 1 0 0 1 1-1h.25a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1zm10.01-4.01a1 1 0 0 1 1.41 0l.18.18a1 1 0 1 1-1.42 1.42l-.17-.18a1 1 0 0 1 0-1.42zm0 8.02a1 1 0 0 1 1.41 0l.18.17a1 1 0 0 1-1.42 1.42l-.17-.18a1 1 0 0 1 0-1.41zM6.4 7.99a1 1 0 0 1 0-1.41l.18-.18a1 1 0 1 1 1.41 1.41l-.17.18a1 1 0 0 1-1.42 0zm1.59 6.62a1 1 0 0 1 0 1.41l-.18.18a1 1 0 0 1-1.41-1.42l.17-.17a1 1 0 0 1 1.42 0z"/>
+                </svg>
+                <!-- moon -->
+                <svg id="moonIcon" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                    <path fill="currentColor" d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Prémiový autoservis</p>
+                    <h1>DJ Garage</h1>
+                    <p class="lead">
+                        Diagnostika, servis a opravy pro řidiče, kteří nechtějí kompromisy. Certifikovaní mechanici, moderní vybavení a osobní přístup.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#kontakt" class="btn-primary">Objednat termín</a>
+                        <a href="#sluzby" class="btn-secondary">Zobrazit služby</a>
+                    </div>
+                    <p class="hero-meta">Otevřeno Po–Pá • Individuální přístup • Záruka na práci</p>
+                </div>
+                <div class="hero-panel" aria-label="Shrnutí služeb">
+    <div class="hero-slider" id="heroSlider">
+        <article class="hero-card is-active">
+            <h2>Kompletní servis vozidel</h2>
+            <p>Údržba, originální díly nebo kvalitní náhrady, servisní historie.</p>
+            <ul class="hero-list">
+                <li>Rychlá diagnostika</li>
+                <li>Příprava na STK</li>
+                <li>Opravy motorů a elektroniky</li>
+            </ul>
+        </article>
+
+        <article class="hero-card">
+            <h2>Diagnostika & elektronika</h2>
+            <p>Moderní diagnostické vybavení pro většinu evropských značek.</p>
+            <ul class="hero-list">
+                <li>Čtení a mazání závad</li>
+                <li>Kódování jednotek</li>
+                <li>Vyhledání závad kabeláže</li>
+            </ul>
+        </article>
+
+        <article class="hero-card">
+            <h2>Příprava a zajištění STK</h2>
+            <p>Auto připravíme, opravíme nedostatky a STK zajistíme.</p>
+            <ul class="hero-list">
+                <li>Kontrola brzd a podvozku</li>
+                <li>Emise</li>
+                <li>Administrativa</li>
+            </ul>
+        </article>
+
+        <div class="hero-dots" aria-label="Přepínání služeb">
+            <button class="hero-dot is-active" data-slide="0" aria-label="Kompletní servis"></button>
+            <button class="hero-dot" data-slide="1" aria-label="Diagnostika"></button>
+            <button class="hero-dot" data-slide="2" aria-label="Příprava na STK"></button>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+        <!-- SLUŽBY -->
+        <section id="sluzby" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Naše služby</h2>
+                    <p>Nabízíme Vám <strong>komplexní servis a opravy všech značek vozidel</strong> – od běžné údržby po specializované zásahy. Každá služba je prováděna s důrazem na kvalitu, přesnost a spolehlivost.</p>
+                </header>
+
+                <div class="grid-services">
+                    <article class="card service-card">
+                        <h3>Opravy vozidel všech značek</h3>
+                        <p>Kompletní servis osobních i užitkových vozidel bez ohledu na značku nebo model.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Diagnostika vozidel</h3>
+                        <p>Moderní diagnostická technika pro přesné odhalení závad všech systémů vozidla.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Podvozky a pneumatika</h3>
+                        <p>Opravy vzduchových i hydraulických podvozků, výměny tlumičů a servis pneumatik.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Příprava a zajištění STK</h3>
+                        <p>Kompletní příprava vozidla na technickou kontrolu včetně emisí a zajištění STK.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Klimatizace</h3>
+                        <p>Kontrola, čištění, servis a plnění klimatizací všech typů vozidel.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Autoelektrika</h3>
+                        <p>Opravy elektrických systémů, alternátorů, startérů a kabelových rozvodů.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Klempířské a lakýrnické práce</h3>
+                        <p>Autoklempírna a lakovna pro menší i rozsáhlé opravy karoserie a laků.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Převodovky</h3>
+                        <p>Opravy a servis automatických i manuálních převodovek všech značek.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Vstřikovací systémy</h3>
+                        <p>Diagnostika a opravy systémů COMMON RAIL a PDS – profesionální vybavení Bosch.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>DPF filtry</h3>
+                        <p>Profesionální čištění a regenerace DPF filtrů bez poškození komponentů.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Prodej ojetých vozidel</h3>
+                        <p>Pečlivě vybrané ojeté osobní a užitkové vozy se zárukou původu a kvality.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Financování oprav</h3>
+                        <p>Možnost profinancování oprav formou výhodných splátek.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Prodej náhradních dílů</h3>
+                        <p>Originální i kvalitní alternativní díly za férové ceny.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Pojistné služby</h3>
+                        <p>Sjednání povinného ručení i havarijního pojištění přímo u nás na místě.</p>
+                    </article>
+
+                    <article class="card service-card">
+                        <h3>Náhradní vozidlo</h3>
+                        <p>Zapůjčení náhradního vozidla po dobu opravy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--CENIK -->
+
+        <!-- CENÍK -->
+            <section id="cenik" class="section section-alt">
+                <div class="container">
+                    <header class="section-head">
+                        <h2>Ceník</h2>
+                        <p>
+                            Ceny za opravy jsou účtovány v hodinové sazbě od <strong>450 Kč do 550 Kč</strong> podle druhu, rozsahu práce a typu vozidla.<br>
+                            Pro stálé zákazníky poskytujeme <strong>věrnostní slevy</strong>.<br>
+                            <em>Nejsme plátci DPH.</em>
+                        </p>
+                    </header>
+
+                    <div class="pricing-grid">
+                        <article class="card pricing-card highlight">
+                            <h3>Hodinová sazba</h3>
+                            <ul class="price-list">
+                                <li><span>Mechanické práce</span><strong>450–550 Kč / hod</strong></li>
+                            </ul>
+                        </article>
+
+                        <article class="card pricing-card">
+                            <h3>Pneuservis</h3>
+                            <ul class="price-list">
+                                <li><span>Přezutí osobní vůz</span><strong>od 800 Kč</strong></li>
+                                <li><span>Vyvážení kol</span><strong>od 100 Kč / ks</strong></li>
+                            </ul>
+                        </article>
+
+                        <article class="card pricing-card">
+                            <h3>Výhody pro zákazníky</h3>
+                            <ul class="price-list">
+                                <li><span>Sleva pro stálé zákazníky</span><strong>až 10 %</strong></li>
+                                <li><span>Kalkulace oprav zdarma</span><strong>0 Kč</strong></li>
+                                <li><span>Individuální přístup</span><strong>v ceně služby</strong></li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        <!-- O NÁS -->
+        <section id="o-nas" class="section section-alt">
+            <div class="container about-grid">
+                <!-- levý sloupec -->
+                <div class="about-content">
+                    <h2>O nás</h2>
+                    <p>DJ Garage je rodinný prémiový autoservis s více než 20 lety zkušeností. Specializujeme se na servis evropských značek, ale opravíme jakékoli vozidlo, které má majitele, který chce mít klid.</p>
+                    <p>Zakládáme si na transparentní komunikaci – před opravou vždy dostanete doporučení, fotodokumentaci a jasnou cenovou nabídku.</p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">let zkušeností</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1 500+</span>
+                            <span class="stat-label">servisovaných vozů</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">48 h</span>
+                            <span class="stat-label">běžné opravy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pravý sloupec -->
+                <div class="about-panel benefit-grid">
+                    <h3>Proč nás zvolit</h3>
+                    <div class="benefit-cards">
+                        <article class="benefit-card">
+                            <div class="benefit-icon">✓</div>
+                            <h4>Transparentní servis</h4>
+                            <p>Fotodokumentace a schválení ceny předem.</p>
+                        </article>
+                        <article class="benefit-card">
+                            <div class="benefit-icon">⚙</div>
+                            <h4>Špičková diagnostika</h4>
+                            <p>Moderní vybavení pro vozy VAG, Mercedes, BMW aj.</p>
+                        </article>
+                        <article class="benefit-card">
+                            <div class="benefit-icon">⭐</div>
+                            <h4>Prémiové díly</h4>
+                            <p>Originál nebo prověřené OEM dle přání.</p>
+                        </article>
+                        <article class="benefit-card">
+                            <div class="benefit-icon">🕒</div>
+                            <h4>Rychlé termíny</h4>
+                            <p>Prioritní vyřízení pro stálé zákazníky.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- KONTAKT -->
+        <section id="kontakt" class="section">
+            <div class="container contact-wrap">
+                <div>
+                    <h2>Kontakt</h2>
+                    <p>Rezervace termínu, dostupnost a nacenění.</p>
+                    <p><strong>Telefon:</strong> +420 608 886 066</p>
+                    <p><strong>E-mail:</strong> autoservisdavid@seznam.cz</p>
+                    <p><strong>Adresa:</strong> Bystřice 732, 739 95 Bystřice</p>
+                </div>
+                <div class="contact-panel">
+                    <h3>Chcete termín?</h3>
+                    <p>Napište nám kdykoli, ozveme se.</p>
+                    <form class="contact-form">
+                        <label>
+                            Jméno
+                            <input type="text" name="name" placeholder="Vaše jméno">
+                        </label>
+                        <label>
+                            E-mail
+                            <input type="email" name="email" placeholder="vas@email.cz">
+                        </label>
+                        <label>
+                            Zpráva
+                            <textarea name="message" rows="3" placeholder="Co potřebujete servisovat?" required style="resize: vertical;"></textarea>
+                        </label>
+                        <button type="submit" class="btn-primary">Odeslat</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <small class="muted">© <span id="year"></span> DJ Garage</small>
+            <p class="footer-sub">Prémiový autoservis pro náročné řidiče.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const toggleBtn = document.getElementById("themeToggle");
+        const sunIcon = document.getElementById("sunIcon");
+        const moonIcon = document.getElementById("moonIcon");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const currentTheme = localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
+
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        updateIcons(currentTheme);
+
+        toggleBtn.addEventListener("click", () => {
+            const newTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            updateIcons(newTheme);
+        });
+
+        function updateIcons(theme) {
+            if (theme === "dark") {
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "inline";
+            } else {
+                sunIcon.style.display = "inline";
+                moonIcon.style.display = "none";
+            }
+        }
+
+
+    const slider = document.getElementById('heroSlider');
+    if (slider) {
+        const slides = Array.from(slider.querySelectorAll('.hero-card'));
+        const dots = Array.from(slider.querySelectorAll('.hero-dot'));
+        let current = 0;
+        const changeTo = (index) => {
+            slides[current].classList.remove('is-active');
+            dots[current].classList.remove('is-active');
+            current = index;
+            slides[current].classList.add('is-active');
+            dots[current].classList.add('is-active');
+        };
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const i = Number(dot.dataset.slide);
+                changeTo(i);
+            });
+        });
+
+        setInterval(() => {
+            const next = (current + 1) % slides.length;
+            changeTo(next);
+        }, 5000); // 5 sekund
+    }
+    </script>
+</body>
+</html>
