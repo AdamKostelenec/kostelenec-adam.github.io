@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>Adam Kostelenec</title>
+  <meta name="description" content="Adam Kostelenec's website" />
+  <link rel="stylesheet" href="styleen.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Michroma&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <!--<strong>Kostelenec Adam</strong> -->
+      <nav aria-label="Main navigation">
+        <a href="/en/#projekty">Projects</a>
+        <a href="/en/#o-mne">About me</a>
+        <a href="/en/#kontakt">Contact</a>
+        <a href="/en/resume" target="_self">Resume</a>
+      </nav>
+      <div class="upleft">
+          <a href="../" target="_self" style="text-decoration: none;color: var(--fg);"> <button class="btn" id="languageToggle" aria-label="Switch language">CZ</button></a>
+        <button class="btn" id="themeToggle" aria-label="Toggle theme">
+          <img src="light.png" alt="Theme icon" class="theme-icon"/>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="hero">
+      <h1>Adam Kostelenec</h1>
+    </div>
+
+    <section id="projekty" aria-labelledby="nadpis-projekty" style="margin-top:2rem;">
+      <h2 id="nadpis-projekty">Projects</h2>
+
+      <div class="projekty-grid">
+
+        <div class="card projekt">
+          <h3>Shoptet XML Translator</h3>
+          <small class="muted">C# · .NET · REST API · XML · 2024</small>
+          <p>A tool for automated translation of product XML feeds into foreign languages...</p>
+        </div>
+
+        <div class="card projekt">
+          <h3>Activity Tracking System</h3>
+          <small class="muted">React Native · JS · API · 2025</small>
+          <p>A Strava-inspired app for tracking activities and routes. Routing system powered by Google Maps API.</p>
+        </div>
+
+        <div class="card projekt">
+          <h3>Price Automation</h3>
+          <small class="muted">C# · .NET · Shoptet API · 2024</small>
+          <p>Internal tool for price recalculation, VAT processing, and export to the Shoptet e-shop platform.</p>
+        </div>
+
+      </div>
+      <hr>
+
+    </section>
+
+    <section id="o-mne" aria-labelledby="nadpis-omne" style="margin-top:2rem;">
+      <h2 id="nadpis-omne">About Me</h2>
+
+      <p>My name is <strong>Adam Kostelenec</strong> and I am a student at the <strong>Faculty of Electrical Engineering and Computer Science at VŠB – Technical University of Ostrava</strong>, where I study <strong>Information Technology</strong>.</p>
+
+      <p>For several years, I have been focused on software and web development — from small automation tools to full-scale web applications.</p>
+
+      <p>Currently, I work as a <strong>programmer at NANO Systems s.r.o.</strong>, where I am responsible for the complete development of applications for the <strong>Shoptet</strong> e-commerce platform in <strong>C#</strong>.</p>
+
+      <ul>
+        <li>data integration using <strong>REST API</strong>,</li>
+        <li>processing and transformation of <strong>XML feeds</strong>,</li>
+        <li>design and implementation of backend services,</li>
+        <li>e-shop template customization (HTML, CSS, JavaScript),</li>
+        <li>development of internal process automation tools.</li>
+      </ul>
+
+      <p>In the past, I also worked at <strong>Gamisport – Jeans s.r.o.</strong>, where I took over the management of the company’s e-shop division and gained experience in technical e-shop management, marketing, and business communication.</p>
+
+      <p>Recently, I have been strongly focused on <strong>building modern websites</strong> — clean, responsive, and optimized for speed and usability. I enjoy combining technical precision with visual design to create websites that are not only functional but also pleasant to use.</p>
+
+      <p>I believe a good developer should understand not only code, but also the people who use their work. That’s why I try to think about projects in a broader context — from user experience and performance to maintainability and scalability.</p>
+
+      <p>At the moment, I am learning more advanced web technologies, such as <strong>JavaScript frameworks (React, Vue)</strong>, while continuing to improve my backend knowledge in <strong>.NET</strong>.</p>
+
+      <hr>
+      <p><strong>Summary:</strong> I combine analytical thinking with attention to detail, I enjoy explaining complex things simply, and I get the most satisfaction when my solutions genuinely make someone’s work easier.</p>
+      <hr>
+    </section>
+
+    <section id="kontakt" aria-labelledby="nadpis-kontakt" style="margin-top:2rem;">
+      <h2 id="nadpis-kontakt">Contact</h2>
+      <form id="contactForm" action="send.php" method="POST">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required style="resize: vertical;"></textarea>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button class="obtn" type="submit">Send</button>
+        <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <section class="soc" id="socials">
+      <h2>Find me on</h2>
+      <ul class="socials">
+        <li><a href="https://github.com/AdamKostelenec" aria-label="GitHub" target="_blank" rel="noopener"></a></li>
+        <li><a href="https://www.linkedin.com/in/adamkostelenec/" aria-label="LinkedIn" target="_blank" rel="noopener"></a></li>
+        <li><a href="https://www.instagram.com/_kostelenec_adam_/" aria-label="Instagram" target="_blank" rel="noopener"></a></li>
+      </ul>
+    </section>
+    <div style="text-align:center;margin-top:1rem;">
+      <small class="muted">© <span id="year"></span> Adam Kostelenec</small>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const root  = document.documentElement;
+  const btn   = document.getElementById('themeToggle');
+  const icon  = document.querySelector('.theme-icon');
+  const stored = localStorage.getItem('theme');
+
+  // Initialization
+  if (stored === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    icon.src = 'dark.png';
+  } else {
+    root.removeAttribute('data-theme');
+    icon.src = 'light.png';
+  }
+
+  btn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+
+    if (next === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      icon.src = 'dark.png';
+    } else {
+      root.removeAttribute('data-theme');
+      icon.src = 'light.png';
+    }
+
+    localStorage.setItem('theme', next);
+  });
+
+  const form = document.getElementById('contactForm');
+  const statusEl = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    statusEl.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.ok) {
+        form.reset();
+        statusEl.textContent = 'Thank you, your message has been sent.';
+      } else {
+        statusEl.textContent = data.error || 'Failed to send. Please try again later.';
+      }
+    } catch {
+      statusEl.textContent = 'Connection error.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

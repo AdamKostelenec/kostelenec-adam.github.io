@@ -35,10 +35,14 @@
 
 html {
     scroll-behavior: smooth;
+    background: #0f1115;           /* stejná jako --bg-color */
+    color-scheme: dark;   
 }
 
 body {
-    background: radial-gradient(circle at top, #161820 0%, var(--bg-color) 60%);
+    background-color: #0f1115;     /* fallback pod gradient */
+    background-image: radial-gradient(circle at top, #161820 0%, var(--bg-color) 60%);
+    background-attachment: fixed;  /* volitelné */
     color: var(--text-color);
     font-family: 'Arimo', -apple-system, Segoe UI, Roboto, sans-serif;
     line-height: 1.6;
@@ -151,7 +155,7 @@ img, svg {
     font-size: 0.7rem;
     letter-spacing: .15em;
     color: var(--muted);
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-text h1 {
@@ -287,7 +291,9 @@ img, svg {
         max-width: 100%;
     }
     .hero-slider .hero-card {
-        position: relative;
+        position: absolute;
+        min-height: 230px;
+
     }
 }
 
@@ -396,6 +402,7 @@ img, svg {
     transition: transform .15s ease, border .15s ease;
 }
 
+
 [data-theme="light"] .benefit-card {
     background: rgba(255,255,255,0.65);
     border: 1px solid rgba(0,0,0,0.02);
@@ -415,6 +422,7 @@ img, svg {
     place-items: center;
     margin-bottom: 0.35rem;
     font-size: 0.9rem;
+    overflow: hidden;
 }
 
 .benefit-card h4 {
@@ -426,7 +434,13 @@ img, svg {
     font-size: 0.72rem;
     color: var(--muted);
 }
-
+.benefit-icon img,
+.benefit-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
 
 
 /* ---------- KONTAKT ---------- */
@@ -574,4 +588,217 @@ img, svg {
     .about-stats {
         gap: 0.6rem;
     }
+@media (max-width: 600px) {
+
+  /* kontejner a mezery */
+  .container {
+    width: min(1180px, 100% - 1.4rem); /* užší okraj na mobilu */
+  }
+
+  .section {
+    padding: 3rem 0 3.2rem;
+  }
+
+  /* top bar */
+  .topbar-inner {
+    height: 58px;
+  }
+
+  /* hero */
+  .hero-section {
+    padding-top: 0.3rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.1rem, 9vw, 2.6rem);
+  }
+
+  .lead {
+    font-size: .9rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-actions {
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    gap: .6rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;             /* tlačítka přes celou šířku – palcovka */
+    justify-content: center;
+    padding: .75rem 1rem;
+  }
+
+  /* služby – ať nejsou tak “kartičkové” */
+  .grid-services {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 1rem .9rem .9rem;
+  }
+
+  /* pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* kontakt */
+  .contact-panel {
+    padding: 1rem .9rem 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+  .contact-form button {
+    width: 100%;
+  }
+
+  /* hero slider – ať není moc vysoký */
+  .hero-slider {
+    min-height: 150px;
+  }
+  .hero-card {
+    max-width: 100%;
+    box-shadow: none; /* na mobilu klidně bez velkého stínu */
+  }
+
+  /* texty v sekci “o nás” */
+  .about-stats {
+    gap: .5rem;
+  }
+  .stat {
+    min-width: 46%;
+  }
+}
+
+/* trošku větší breakpoint pro menu */
+@media (max-width: 820px) {
+  .main-nav {
+    display: none;
+  }
+}
+}
+
+
+/* ===== FOTO-SERVIS (SLIDER – 1 FOTKA) ===== */
+.foto-servis {
+  padding-top: 1.5rem;
+}
+
+.foto-slider {
+  position: relative;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  min-height: 260px;
+}
+
+/* jednotlivé slidery jsou přes sebe, zobrazuje se jen aktivní */
+.foto-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+
+.foto-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.foto-slide img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* popisek */
+.foto-slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.68));
+}
+
+[data-theme="light"] .foto-slide figcaption {
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.88));
+  color: #111;
+}
+
+/* šipky */
+.foto-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  transition: background .15s ease, transform .15s ease;
+}
+
+.foto-nav:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+.foto-nav.prev { left: 12px; }
+.foto-nav.next { right: 12px; }
+
+/* tečky */
+.foto-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(6px);
+}
+
+.foto-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.75);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.foto-dot.is-active {
+  background: #fff;
+}
+
+/* mobil */
+@media (max-width: 600px) {
+  .foto-slide img {
+    height: 240px;
+  }
+  .foto-nav {
+    width: 40px;
+    height: 40px;
+  }
 }

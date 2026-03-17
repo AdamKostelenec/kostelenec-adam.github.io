@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DJ Garage - prémiový autoservis pro náročné. Opravy, diagnostika, údržba.">
+    <meta name="theme-color" content="#0f1115">
     <link rel="stylesheet" href="../djgarage/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,16 +24,16 @@
                 <a href="#o-nas">O nás</a>
                 <a href="#kontakt">Kontakt</a>
             </nav>
-            <button class="btn-icon" id="themeToggle" aria-label="Přepnout téma">
-                <!-- sun -->
+           <!-- <button class="btn-icon" id="themeToggle" aria-label="Přepnout téma">
+               
                 <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
                     <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.25a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1zm0 11.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm7-3.5a1 1 0 0 1 1 1v.25a1 1 0 1 1-2 0V13a1 1 0 0 1 1-1zM12 17a1 1 0 0 1 1 1v1.25a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1zM6 12a1 1 0 0 1 1-1h.25a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1zm10.01-4.01a1 1 0 0 1 1.41 0l.18.18a1 1 0 1 1-1.42 1.42l-.17-.18a1 1 0 0 1 0-1.42zm0 8.02a1 1 0 0 1 1.41 0l.18.17a1 1 0 0 1-1.42 1.42l-.17-.18a1 1 0 0 1 0-1.41zM6.4 7.99a1 1 0 0 1 0-1.41l.18-.18a1 1 0 1 1 1.41 1.41l-.17.18a1 1 0 0 1-1.42 0zm1.59 6.62a1 1 0 0 1 0 1.41l-.18.18a1 1 0 0 1-1.41-1.42l.17-.17a1 1 0 0 1 1.42 0z"/>
                 </svg>
-                <!-- moon -->
+                
                 <svg id="moonIcon" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
                     <path fill="currentColor" d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"/>
                 </svg>
-            </button>
+            </button>-->
         </div>
     </header>
 
@@ -254,28 +255,74 @@
                     <h3>Proč nás zvolit</h3>
                     <div class="benefit-cards">
                         <article class="benefit-card">
-                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-icon"><img src="check.png" alt="Ikona tématu" class="benefit-img"/></div>
                             <h4>Transparentní servis</h4>
                             <p>Fotodokumentace a schválení ceny předem.</p>
                         </article>
                         <article class="benefit-card">
-                            <div class="benefit-icon">⚙</div>
+                            <div class="benefit-icon"><img src="wrench.png" alt="Ikona tématu" class="benefit-img"/></div>
                             <h4>Špičková diagnostika</h4>
                             <p>Moderní vybavení pro vozy VAG, Mercedes, BMW aj.</p>
                         </article>
                         <article class="benefit-card">
-                            <div class="benefit-icon">⭐</div>
+                            <div class="benefit-icon"><img src="disc-brake.png" alt="Ikona tématu" class="benefit-img"/></div>
                             <h4>Prémiové díly</h4>
                             <p>Originál nebo prověřené OEM dle přání.</p>
                         </article>
                         <article class="benefit-card">
-                            <div class="benefit-icon">🕒</div>
+                            <div class="benefit-icon"><img src="clock.png" alt="Ikona tématu" class="benefit-img"/></div>
                             <h4>Rychlé termíny</h4>
                             <p>Prioritní vyřízení pro stálé zákazníky.</p>
                         </article>
                     </div>
                 </div>
             </div>
+                <div class="foto-servis" aria-label="Fotogalerie autoservisu">
+                <div class="container">
+                <header class="section-head">
+                <h2>Naše dílna</h2>
+                </header>
+
+                <div class="foto-slider" data-autoplay="true" data-interval="4500">
+                <button class="foto-nav prev" type="button" aria-label="Předchozí fotka">‹</button>
+
+                <figure class="foto-slide is-active">
+                <img src="service1.jpg" alt="Servisní hala – pracovní zóna" loading="lazy">
+                <figcaption>Servisní hala</figcaption>
+                </figure>
+
+                <figure class="foto-slide">
+                <img src="service1.jpg" alt="Diagnostické pracoviště a měřicí technika" loading="lazy">
+                <figcaption>Diagnostika</figcaption>
+                </figure>
+
+                <figure class="foto-slide">
+                <img src="service1.jpg" alt="Zvedák a vybavení pro servis podvozku" loading="lazy">
+                <figcaption>Zvedáky</figcaption>
+                </figure>
+
+                <figure class="foto-slide">
+                <img src="service1.jpg" alt="Uspořádané dílenské nářadí a pracovní stůl" loading="lazy">
+                <figcaption>Vybavení dílny</figcaption>
+                </figure>
+
+                <figure class="foto-slide">
+                <img src="service1.jpg" alt="Pneuservis – vyvažování a manipulace s koly" loading="lazy">
+                <figcaption>Pneuservis</figcaption>
+                </figure>
+
+                <figure class="foto-slide">
+                <img src="service1.jpg" alt="Čisté zázemí servisu a pracovní pořádek" loading="lazy">
+                <figcaption>Čistota a pořádek</figcaption>
+                </figure>
+
+                <button class="foto-nav next" type="button" aria-label="Další fotka">›</button>
+
+                <div class="foto-dots" aria-label="Výběr fotky" role="tablist"></div>
+                </div>
+                </div>
+                </div>
+
         </section>
 
 
@@ -292,20 +339,22 @@
                 <div class="contact-panel">
                     <h3>Chcete termín?</h3>
                     <p>Napište nám kdykoli, ozveme se.</p>
-                    <form class="contact-form">
+                    <form id="contact-form" class="contact-form">
                         <label>
                             Jméno
-                            <input type="text" name="name" placeholder="Vaše jméno">
+                            <input id="name" type="text" name="name" placeholder="Vaše jméno">
                         </label>
                         <label>
                             E-mail
-                            <input type="email" name="email" placeholder="vas@email.cz">
+                            <input id="email" type="email" name="email" placeholder="vas@email.cz">
                         </label>
                         <label>
                             Zpráva
-                            <textarea name="message" rows="3" placeholder="Co potřebujete servisovat?" required style="resize: vertical;"></textarea>
+                            <textarea id="message" name="message" rows="3" placeholder="Co potřebujete servisovat?" required style="resize: vertical;"></textarea>
                         </label>
                         <button type="submit" class="btn-primary">Odeslat</button>
+                        <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+
                     </form>
                 </div>
             </div>
@@ -325,17 +374,18 @@
         const sunIcon = document.getElementById("sunIcon");
         const moonIcon = document.getElementById("moonIcon");
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const currentTheme = localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
 
+        let currentTheme = "dark";
         document.documentElement.setAttribute("data-theme", currentTheme);
-        updateIcons(currentTheme);
+        /*updateIcons(currentTheme);
 
         toggleBtn.addEventListener("click", () => {
             const newTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
             document.documentElement.setAttribute("data-theme", newTheme);
             localStorage.setItem("theme", newTheme);
             updateIcons(newTheme);
-        });
+        }); */
+       
 
         function updateIcons(theme) {
             if (theme === "dark") {
@@ -373,6 +423,113 @@
             changeTo(next);
         }, 5000); // 5 sekund
     }
+     const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      statusEl.textContent = 'Odesílám…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.ok) {
+          form.reset();
+          statusEl.textContent = 'Děkuji, zpráva byla odeslána.';
+        } else {
+          statusEl.textContent = data.error || 'Nepodařilo se odeslat. Zkuste to prosím později.';
+        }
+      } catch {
+        statusEl.textContent = 'Chyba připojení.';
+      } finally {
+        btn.disabled = false;
+      }
+    });
     </script>
+    <script>
+        (() => {
+        const slider = document.querySelector(".foto-slider");
+        if (!slider) return;
+
+        const slides = Array.from(slider.querySelectorAll(".foto-slide"));
+        const prevBtn = slider.querySelector(".foto-nav.prev");
+        const nextBtn = slider.querySelector(".foto-nav.next");
+        const dotsWrap = slider.querySelector(".foto-dots");
+
+        let index = Math.max(0, slides.findIndex(s => s.classList.contains("is-active")));
+        if (index === -1) index = 0;
+
+        // vytvoření teček
+        const dots = slides.map((_, i) => {
+            const b = document.createElement("button");
+            b.type = "button";
+            b.className = "foto-dot";
+            b.setAttribute("aria-label", `Fotka ${i + 1}`);
+            b.addEventListener("click", () => goTo(i));
+            dotsWrap.appendChild(b);
+            return b;
+        });
+
+        function render() {
+            slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+            dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+        }
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            render();
+            restartAutoplay();
+        }
+
+        function next() { goTo(index + 1); }
+        function prev() { goTo(index - 1); }
+
+        prevBtn?.addEventListener("click", prev);
+        nextBtn?.addEventListener("click", next);
+
+        // klávesnice (když slider fokusneš)
+        slider.tabIndex = 0;
+        slider.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") prev();
+            if (e.key === "ArrowRight") next();
+        });
+
+        // autoplay
+        const autoplay = slider.dataset.autoplay === "true";
+        const interval = Math.max(1500, parseInt(slider.dataset.interval || "4500", 10));
+        let timer = null;
+
+        function startAutoplay() {
+            if (!autoplay || slides.length <= 1) return;
+            timer = setInterval(next, interval);
+        }
+        function stopAutoplay() {
+            if (timer) clearInterval(timer);
+            timer = null;
+        }
+        function restartAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        // pauza na hover / focus (příjemnější UX)
+        slider.addEventListener("mouseenter", stopAutoplay);
+        slider.addEventListener("mouseleave", startAutoplay);
+        slider.addEventListener("focusin", stopAutoplay);
+        slider.addEventListener("focusout", startAutoplay);
+
+        render();
+        startAutoplay();
+        })();
+        </script>
+
 </body>
 </html>

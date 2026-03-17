@@ -21,9 +21,12 @@
         <a href="#kontakt">Kontakt</a>
         <a href="/zivotopis" target="_self">Životopis</a>
       </nav>
+      <div class="upleft">
+        <a href="../en" target="_self" style="text-decoration: none;color: var(--fg);"><button class="btn" id="languageToggle" aria-label="Přepnout jazyk">EN</button></a>
       <button class="btn" id="themeToggle" aria-label="Přepnout téma">
         <img src="light.png" alt="Ikona tématu" class="theme-icon"/>
       </button>
+      </div>
     </div>
   </header>
 
@@ -42,21 +45,18 @@
             <h3>Shoptet XML Translator</h3>
             <small class="muted">C# · .NET · REST API · XML · 2024</small>
             <p>Nástroj pro automatizovaný překlad produktových XML feedů do cizích jazyků...</p>
-            <a href="#" class="btn">Zobrazit</a>
+          </div>
+
+          <div class="card projekt">
+            <h3>Activity tracking systém</h3>
+            <small class="muted">React Native · JS · API · 2025</small>
+            <p>Napodobenina aplikace Strava pro sledování aktivit a tras. Routing systém přes Google Maps API.</p>
           </div>
 
           <div class="card projekt">
             <h3>Automatizace cen</h3>
             <small class="muted">C# · .NET · Shoptet API · 2024</small>
             <p>Interní nástroj pro přepočet cen, DPH a export do e-shopu Shoptet.</p>
-            <a href="#" class="btn">Zobrazit</a>
-          </div>
-
-          <div class="card projekt">
-            <h3>Portfolio web</h3>
-            <small class="muted">HTML · CSS · JavaScript · 2025</small>
-            <p>Osobní portfolio web zaměřený na čistý design, rychlost a přístupnost.</p>
-            <a href="#" class="btn">Zobrazit</a>
           </div>
 
         </div>
@@ -153,7 +153,6 @@
     btn.addEventListener('click', () => {
       const isDark = root.getAttribute('data-theme') === 'dark';
       const next = isDark ? 'light' : 'dark';
-
       if (next === 'dark') {
         root.setAttribute('data-theme', 'dark');
         icon.src = 'dark.png';

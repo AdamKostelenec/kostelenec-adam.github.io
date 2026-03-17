@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>Shoptet XML Translator – Detail projektu</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Michroma&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <nav aria-label="Hlavní navigace">
+      <a href="/#projekty">Projekty</a>
+      <a href="/#o-mne">O mně</a>
+      <a href="/#kontakt">Kontakt</a>
+      <a href="/zivotopis">Životopis</a>
+    </nav>
+
+    <button class="btn" id="themeToggle" aria-label="Přepnout téma">
+      <img src="../light.png" alt="Ikona tématu" class="theme-icon">
+    </button>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="hero">
+    <h1>Shoptet XML Translator</h1>
+    <p class="muted">C# · .NET · REST API · XML · 2024</p>
+  </div>
+
+  <section class="card">
+    <h2>Popis projektu</h2>
+    <p>
+      Shoptet XML Translator je interní nástroj pro automatizovaný překlad
+      produktových XML feedů do cizích jazyků. Aplikace zpracovává rozsáhlé XML
+      struktury a pomocí externího API provádí překlad jednotlivých polí
+      (název, popis, varianty).
+    </p>
+
+    <p>
+      Cílem projektu bylo výrazně snížit časovou náročnost ruční lokalizace
+      produktů a eliminovat chyby vznikající při manuálním překladu.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Použité technologie</h2>
+    <ul>
+      <li><strong>C# / .NET</strong> – jádro aplikace</li>
+      <li><strong>REST API</strong> – komunikace s překladovou službou</li>
+      <li><strong>XML</strong> – parsování a transformace feedů</li>
+      <li><strong>Shoptet</strong> – cílová e-commerce platforma</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Funkce</h2>
+    <ul>
+      <li>Načtení XML feedu z URL nebo souboru</li>
+      <li>Detekce jazykových mutací</li>
+      <li>Automatický překlad vybraných elementů</li>
+      <li>Zachování struktury XML</li>
+      <li>Export hotového feedu pro import do Shoptetu</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Výsledek</h2>
+    <p>
+      Nástroj je nasazen v produkčním prostředí a denně šetří hodiny ruční práce.
+      Díky modularitě lze snadno přidat další jazyky nebo upravit pravidla překladu.
+    </p>
+  </section>
+
+  <a href="/#projekty" class="btn">← Zpět na projekty</a>
+
+</main>
+
+<footer class="container">
+  <div style="text-align:center;">
+    <small class="muted">© <span id="year"></span> Adam Kostelenec</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const root  = document.documentElement;
+  const btn   = document.getElementById('themeToggle');
+  const icon  = document.querySelector('.theme-icon');
+  const stored = localStorage.getItem('theme');
+
+  if (stored === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    icon.src = '../dark.png';
+  } else {
+    root.removeAttribute('data-theme');
+    icon.src = '../light.png';
+  }
+
+  btn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+
+    if (next === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      icon.src = '../dark.png';
+    } else {
+      root.removeAttribute('data-theme');
+      icon.src = '../light.png';
+    }
+
+    localStorage.setItem('theme', next);
+  });
+</script>
+
+</body>
+</html>
