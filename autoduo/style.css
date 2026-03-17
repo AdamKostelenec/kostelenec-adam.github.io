@@ -559,6 +559,110 @@ img {
   font-weight: 300;
 }
 
+/* O NÁS */
+.onas-section {
+  padding: 110px 0;
+  background: #ffffff;
+}
+
+.onas-heading {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.onas-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #0ea5d7;
+  margin-bottom: 18px;
+}
+
+.onas-label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #0f172a;
+  border-radius: 3px;
+}
+
+.onas-heading h2 {
+  font-size: clamp(2.3rem, 4.2vw, 4.3rem);
+  line-height: 1.12;
+  color: #0f172a;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.onas-heading > p {
+  font-size: 1.12rem;
+  color: #6b7280;
+}
+
+.onas-heading > p strong {
+  color: #1f2937;
+}
+
+.onas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.onas-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onas-image {
+  width: 100%;
+  max-width: 580px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.onas-features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.onas-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.onas-feature-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onas-feature strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.onas-feature p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
 /* KONTAKT SEKCE */
 .kontakt-section {
   padding: 100px 0;
@@ -685,6 +789,43 @@ img {
   color: #4b5563;
 }
 
+/* FOOTER */
+.site-footer {
+  background: #111827;
+  padding: 36px 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.92rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-right: 12px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-right p {
+  color: rgba(255, 255, 255, 0.35);
+}
+
 /* RESPONSIVE */
 @media (max-width: 1180px) {
   .stats-inner {
@@ -707,6 +848,20 @@ img {
 }
 
 @media (max-width: 980px) {
+  .onas-section {
+    padding: 80px 0;
+  }
+
+  .onas-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .onas-image {
+    max-width: 100%;
+    max-height: 420px;
+  }
+
   .kontakt-grid {
     grid-template-columns: 1fr;
   }
@@ -921,6 +1076,33 @@ img {
   .service-card p {
     font-size: 0.98rem;
     line-height: 1.7;
+  }
+
+  .onas-section {
+    padding: 64px 0;
+  }
+
+  .onas-heading {
+    margin-bottom: 40px;
+  }
+
+  .onas-grid {
+    gap: 32px;
+  }
+
+  .onas-image {
+    max-height: 300px;
+    border-radius: 18px;
+  }
+
+  .onas-feature-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .onas-feature-icon svg {
+    width: 30px;
+    height: 30px;
   }
 
   .kontakt-section {
