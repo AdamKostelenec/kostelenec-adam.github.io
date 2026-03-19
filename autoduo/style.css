@@ -70,8 +70,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #1f2937;
+  background: #121212;
+  color: #e5e5e5;
   line-height: 1.5;
 }
 
@@ -92,25 +92,25 @@ img {
 
 /* HEADER */
 .site-header {
-  background: #ffffff;
+  background: #0d0d0d;
   padding: 22px 0 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-progress {
   width: 100%;
   height: 3px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   margin-top: 18px;
 }
 
 .scroll-progress-bar {
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #16b5e8, #0ea5d7);
+  background: linear-gradient(90deg, #ef4444, #dc2626);
   transform: scaleX(0);
   transform-origin: left center;
   will-change: transform;
@@ -126,12 +126,12 @@ img {
 .logo a {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #f0f0f0;
   letter-spacing: 0.5px;
 }
 
 .logo a span {
-  color: #0ea5d7;
+  color: #dc2626;
 }
 
 .main-nav {
@@ -144,14 +144,14 @@ img {
   position: relative;
   font-size: 1rem;
   font-weight: 500;
-  color: #4b5563;
+  color: #a3a3a3;
   padding-bottom: 8px;
   transition: color 0.25s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: #0ea5d7;
+  color: #ef4444;
 }
 
 .main-nav a::after {
@@ -161,7 +161,7 @@ img {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: #0ea5d7;
+  background: #dc2626;
   border-radius: 999px;
   transition: width 0.25s ease;
 }
@@ -172,7 +172,7 @@ img {
 }
 
 .header-btn {
-  background: #0ea5d7;
+  background: #dc2626;
   color: #fff;
   padding: 13px 24px;
   border-radius: 999px;
@@ -182,7 +182,7 @@ img {
 }
 
 .header-btn:hover {
-  background: #0b93c0;
+  background: #b91c1c;
   color: #fff;
 }
 
@@ -201,7 +201,7 @@ img {
 
 /* ÚVOD */
 .intro-section {
-  background: #ffffff;
+  background: #121212;
   padding-bottom: 100px;
 }
 
@@ -230,8 +230,8 @@ img {
   inset: 0;
   background: linear-gradient(
     160deg,
-    rgba(11, 42, 59, 0.82),
-    rgba(0, 150, 200, 0.7)
+    rgba(0, 0, 0, 0.85),
+    rgba(139, 0, 0, 0.6)
   );
 }
 
@@ -270,12 +270,12 @@ img {
 }
 
 .btn-primary {
-  background: #0ea5d7;
+  background: #dc2626;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #0b93c0;
+  background: #b91c1c;
 }
 
 .btn-secondary {
@@ -286,7 +286,7 @@ img {
 
 .btn-secondary:hover {
   background: #fff;
-  color: #0ea5d7;
+  color: #dc2626;
 }
 
 /* ÚVODNÍ BLOK POD HERO */
@@ -330,7 +330,7 @@ img {
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: #0ea5d7;
+  color: #ef4444;
 }
 
 .intro-label::before {
@@ -338,14 +338,14 @@ img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #0f172a;
+  background: #dc2626;
   border-radius: 3px;
 }
 
 .intro-text h2 {
   font-size: clamp(2rem, 4vw, 4.2rem);
   line-height: 1.12;
-  color: #0f172a;
+  color: #f0f0f0;
   margin-bottom: 24px;
   font-weight: 500;
 }
@@ -357,12 +357,12 @@ img {
 .intro-text p {
   font-size: 1.08rem;
   line-height: 1.85;
-  color: #6b7280;
+  color: #a3a3a3;
   margin-bottom: 18px;
 }
 
 .intro-text p strong {
-  color: #1f2937;
+  color: #e5e5e5;
 }
 
 .intro-actions {
@@ -373,29 +373,29 @@ img {
 }
 
 .intro-btn-primary {
-  background: #0ea5d7;
+  background: #dc2626;
   color: #fff;
 }
 
 .intro-btn-primary:hover {
-  background: #0b93c0;
+  background: #b91c1c;
 }
 
 .intro-btn-secondary {
   background: transparent;
-  border: 2px solid #0ea5d7;
-  color: #0ea5d7;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .intro-btn-secondary:hover {
-  background: #0ea5d7;
-  color: #fff;
+  background: #fff;
+  color: #dc2626;
 }
 
 /* STATISTIKY */
 .stats-bar {
   margin-top: 56px;
-  background: #0b2a3b;
+  background: #1a1a1a;
   border-radius: 28px;
   padding: 60px 70px;
   color: #fff;
@@ -424,7 +424,7 @@ img {
 }
 
 .stat-number span {
-  color: #19c2f0;
+  color: #ef4444;
   margin-left: 4px;
 }
 
@@ -436,7 +436,7 @@ img {
 
 /* SLUŽBY */
 .services-section {
-  background: #f8f9fa;
+  background: #0d0d0d;
   padding: 110px 0;
 }
 
@@ -454,7 +454,7 @@ img {
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: #0ea5d7;
+  color: #ef4444;
 }
 
 .services-label::before {
@@ -462,14 +462,14 @@ img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #0f172a;
+  background: #dc2626;
   border-radius: 3px;
 }
 
 .services-heading h2 {
   font-size: clamp(2.3rem, 4.2vw, 4.3rem);
   line-height: 1.12;
-  color: #0f172a;
+  color: #f0f0f0;
   margin-bottom: 22px;
   font-weight: 500;
 }
@@ -479,7 +479,7 @@ img {
   margin: 0 auto;
   font-size: 1.12rem;
   line-height: 1.8;
-  color: #6b7280;
+  color: #a3a3a3;
 }
 
 .services-grid {
@@ -490,32 +490,32 @@ img {
 
 .service-card {
   grid-column: span 2;
-  background: #ffffff;
+  background: #1a1a1a;
   border-radius: 20px;
   padding: 36px 32px;
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .service-card-featured {
   grid-column: span 3;
-  background: #0b2a3b;
-  border-color: transparent;
+  background: #1e1e1e;
+  border-color: rgba(220, 38, 38, 0.2);
   color: #fff;
 }
 
 .service-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-  border-color: rgba(14, 165, 215, 0.2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 .service-card-featured:hover {
-  box-shadow: 0 16px 40px rgba(11, 42, 59, 0.3);
-  border-color: transparent;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(220, 38, 38, 0.4);
 }
 
 .service-icon {
@@ -523,16 +523,16 @@ img {
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  background: rgba(14, 165, 215, 0.1);
-  color: #0ea5d7;
+  background: rgba(220, 38, 38, 0.1);
+  color: #ef4444;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .service-card-featured .service-icon {
-  background: rgba(14, 165, 215, 0.2);
-  color: #3ec5f0;
+  background: rgba(220, 38, 38, 0.2);
+  color: #f87171;
 }
 
 .service-text {
@@ -542,7 +542,7 @@ img {
 
 .service-card h3 {
   font-size: 1.2rem;
-  color: #0f172a;
+  color: #f0f0f0;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -554,7 +554,7 @@ img {
 .service-card p {
   font-size: 0.98rem;
   line-height: 1.75;
-  color: #6b7280;
+  color: #a3a3a3;
 }
 
 .service-card-featured p {
@@ -564,11 +564,11 @@ img {
 /* KONTAKTNÍ BAR */
 .contact-bar {
   padding: 80px 0;
-  background: #ffffff;
+  background: #121212;
 }
 
 .contact-bar-box {
-  background: linear-gradient(135deg, #16c4f0, #0ea5d7);
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
   border-radius: 28px;
   padding: 60px 48px;
   text-align: center;
@@ -616,7 +616,7 @@ img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #0f172a;
+  background: #fff;
   border-radius: 3px;
 }
 
@@ -663,7 +663,7 @@ img {
 /* O NÁS */
 .onas-section {
   padding: 110px 0;
-  background: #ffffff;
+  background: #121212;
 }
 
 .onas-heading {
@@ -678,7 +678,7 @@ img {
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: #0ea5d7;
+  color: #ef4444;
   margin-bottom: 18px;
 }
 
@@ -687,25 +687,25 @@ img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #0f172a;
+  background: #dc2626;
   border-radius: 3px;
 }
 
 .onas-heading h2 {
   font-size: clamp(2.3rem, 4.2vw, 4.3rem);
   line-height: 1.12;
-  color: #0f172a;
+  color: #f0f0f0;
   font-weight: 500;
   margin-bottom: 18px;
 }
 
 .onas-heading > p {
   font-size: 1.12rem;
-  color: #6b7280;
+  color: #a3a3a3;
 }
 
 .onas-heading > p strong {
-  color: #1f2937;
+  color: #e5e5e5;
 }
 
 .onas-grid {
@@ -754,20 +754,20 @@ img {
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: #0f172a;
+  color: #f0f0f0;
   margin-bottom: 6px;
 }
 
 .onas-feature p {
   font-size: 1.02rem;
   line-height: 1.7;
-  color: #6b7280;
+  color: #a3a3a3;
 }
 
 /* KONTAKT SEKCE */
 .kontakt-section {
   padding: 100px 0;
-  background: #ffffff;
+  background: #121212;
 }
 
 .kontakt-heading {
@@ -782,7 +782,7 @@ img {
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: #0ea5d7;
+  color: #ef4444;
   margin-bottom: 18px;
 }
 
@@ -791,14 +791,14 @@ img {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #0f172a;
+  background: #dc2626;
   border-radius: 3px;
 }
 
 .kontakt-heading h2 {
   font-size: clamp(2.3rem, 4.2vw, 4.3rem);
   line-height: 1.12;
-  color: #0f172a;
+  color: #f0f0f0;
   font-weight: 500;
 }
 
@@ -813,7 +813,7 @@ img {
   min-height: 460px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .kontakt-map iframe {
@@ -823,7 +823,7 @@ img {
 }
 
 .kontakt-info {
-  background: #0b2a3b;
+  background: #1a1a1a;
   border-radius: 20px;
   padding: 44px 40px;
   display: flex;
@@ -844,7 +844,7 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #0ea5d7;
+  background: #dc2626;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -882,17 +882,17 @@ img {
 .content-section h2 {
   font-size: 2rem;
   margin-bottom: 14px;
-  color: #111827;
+  color: #f0f0f0;
 }
 
 .content-section p {
   font-size: 1.05rem;
-  color: #4b5563;
+  color: #a3a3a3;
 }
 
 /* FOOTER */
 .site-footer {
-  background: #111827;
+  background: #0a0a0a;
   padding: 36px 0;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.92rem;
@@ -914,7 +914,7 @@ img {
 }
 
 .footer-logo span {
-  color: #0ea5d7;
+  color: #dc2626;
 }
 
 .footer-left {
