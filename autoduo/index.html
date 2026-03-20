@@ -92,7 +92,7 @@
             </p>
 
             <div class="intro-actions">
-              <a href="https://www.sauto.cz/" class="btn intro-btn-primary">Aktuální nabídka</a>
+              <a href="https://www.sauto.cz/" class="btn intro-btn-primary">Aktuální nabídka vozů</a>
               <a href="#kontakt" class="btn intro-btn-secondary">Chci dovézt auto</a>
               <a href="#kontakt" class="btn intro-btn-secondary">Chci prodat auto</a>
 
@@ -395,6 +395,7 @@
   const progressBar = document.getElementById("scrollProgressBar");
   const sections = document.querySelectorAll("main section");
   const navLinks = document.querySelectorAll(".main-nav a");
+  const header = document.querySelector(".site-header");
 
   let ticking = false;
 
@@ -423,11 +424,16 @@
     });
   }
 
+  function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 60);
+  }
+
   function handleScroll() {
     if (!ticking) {
       requestAnimationFrame(() => {
         updateScrollProgress();
         updateActiveNav();
+        updateHeader();
         ticking = false;
       });
       ticking = true;
@@ -438,19 +444,66 @@
   window.addEventListener("load", () => {
     updateScrollProgress();
     updateActiveNav();
+    updateHeader();
   });
+
+  // Animated counter for stat numbers
+  function animateCounter(el) {
+    const text = el.textContent;
+    const suffix = el.querySelector("span");
+    const suffixText = suffix ? suffix.textContent : "";
+    const numberText = text.replace(suffixText, "").trim();
+    const target = parseInt(numberText, 10);
+    if (isNaN(target)) return;
+
+    const duration = 2500;
+    const start = performance.now();
+
+    el.textContent = "0";
+    if (suffix) el.appendChild(suffix);
+
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+
+      el.childNodes[0].textContent = current;
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
 
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+
+        // Trigger counter animation on stat numbers
+        if (entry.target.classList.contains("stats-bar")) {
+          entry.target.querySelectorAll(".stat-number").forEach(el => {
+            animateCounter(el);
+          });
+        }
+
+        // After entrance animation, switch to fast hover transition
+        if (entry.target.classList.contains("service-card")) {
+          const delay = parseFloat(getComputedStyle(entry.target).transitionDelay) || 0;
+          setTimeout(() => entry.target.classList.add("anim-done"), (1800 + delay * 1000));
+        }
+
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: "0px 0px -40px 0px"
+    threshold: 0.08,
+    rootMargin: "0px 0px -20px 0px"
   });
 
   document.querySelectorAll(".fade-up, .fade-left, .fade-right, .fade-in").forEach(el => {
@@ -460,6 +513,17 @@
     } else {
       observer.observe(el);
     }
+  });
+
+  // Smooth nav link clicks
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   });
 </script>
 </html>

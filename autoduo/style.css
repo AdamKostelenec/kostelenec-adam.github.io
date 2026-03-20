@@ -5,56 +5,65 @@
 }
 
 /* ANIMACE */
+.fade-up,
+.fade-left,
+.fade-right,
+.fade-in {
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .fade-up {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(20px) translateZ(0);
+  transition: opacity 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .fade-up.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateZ(0);
 }
 
 .fade-left {
   opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(-40px) translateZ(0);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-left.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0) translateZ(0);
 }
 
 .fade-right {
   opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(40px) translateZ(0);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-right.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0) translateZ(0);
 }
 
 .fade-in {
   opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-in.visible {
   opacity: 1;
 }
 
-.stagger-1 { transition-delay: 0.08s; }
-.stagger-2 { transition-delay: 0.16s; }
-.stagger-3 { transition-delay: 0.24s; }
-.stagger-4 { transition-delay: 0.32s; }
-.stagger-5 { transition-delay: 0.40s; }
+.stagger-1 { transition-delay: 0.2s; }
+.stagger-2 { transition-delay: 0.4s; }
+.stagger-3 { transition-delay: 0.6s; }
+.stagger-4 { transition-delay: 0.8s; }
+.stagger-5 { transition-delay: 1.0s; }
 
 @media (prefers-reduced-motion: reduce) {
   .fade-up, .fade-left, .fade-right, .fade-in {
@@ -67,6 +76,22 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+[id] {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 980px) {
+  [id] {
+    scroll-margin-top: 140px;
+  }
+}
+
+@media (max-width: 640px) {
+  [id] {
+    scroll-margin-top: 110px;
+  }
 }
 
 body {
@@ -94,12 +119,20 @@ img {
 
 /* HEADER */
 .site-header {
-  background: #0d0d0d;
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 22px 0 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(13, 13, 13, 0.95);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .scroll-progress {
@@ -185,6 +218,8 @@ img {
 .header-btn:hover {
   background: #b91c1c;
   color: #fff;
+  box-shadow: 0 6px 24px rgba(220, 38, 38, 0.35);
+  transform: translateY(-1px);
 }
 
 /* OBECNÁ TLAČÍTKA */
@@ -197,7 +232,11 @@ img {
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 /* ÚVOD */
@@ -277,6 +316,8 @@ img {
 
 .btn-primary:hover {
   background: #b91c1c;
+  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -288,6 +329,8 @@ img {
 .btn-secondary:hover {
   background: #fff;
   color: #dc2626;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 /* ÚVODNÍ BLOK POD HERO */
@@ -322,6 +365,12 @@ img {
   height: 12px;
   background: #dc2626;
   border-radius: 3px;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
 }
 
 .intro-text h2 {
@@ -363,6 +412,8 @@ img {
 
 .intro-btn-primary:hover {
   background: #b91c1c;
+  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+  transform: translateY(-2px);
 }
 
 .intro-btn-secondary {
@@ -374,6 +425,8 @@ img {
 .intro-btn-secondary:hover {
   background: #fff;
   color: #dc2626;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
 /* STATISTIKY */
@@ -400,6 +453,14 @@ img {
 
 .stats-title strong {
   font-weight: 800;
+}
+
+.stat {
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: scale(1.05);
 }
 
 .stat-number {
@@ -448,6 +509,7 @@ img {
   height: 12px;
   background: #dc2626;
   border-radius: 3px;
+  animation: pulse-dot 2s ease-in-out infinite;
 }
 
 .services-heading h2 {
@@ -484,6 +546,21 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card.fade-up {
+  transform: translateY(10px) translateZ(0) scale(0.98);
+  transition: opacity 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0) translateZ(0) scale(1);
+}
+
+.service-card.fade-up.anim-done {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -560,13 +637,21 @@ img {
 }
 
 .contact-bar-box {
-  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  background: linear-gradient(135deg, #b91c1c, #dc2626, #b91c1c);
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
   border-radius: 28px;
   padding: 60px 48px;
   text-align: center;
   color: #fff;
   position: relative;
   overflow: hidden;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .contact-bar-box::before {
@@ -644,6 +729,11 @@ img {
 
 .contact-bar-link:hover {
   opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.contact-bar-link {
+  transition: opacity 0.2s ease, transform 0.3s ease;
 }
 
 .contact-bar-divider {
@@ -681,6 +771,7 @@ img {
   height: 12px;
   background: #dc2626;
   border-radius: 3px;
+  animation: pulse-dot 2s ease-in-out infinite;
 }
 
 .onas-heading h2 {
@@ -730,6 +821,19 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.onas-feature:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateX(8px);
+}
+
+.onas-feature:hover .onas-feature-icon svg {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
 }
 
 .onas-feature-icon {
@@ -785,6 +889,7 @@ img {
   height: 12px;
   background: #dc2626;
   border-radius: 3px;
+  animation: pulse-dot 2s ease-in-out infinite;
 }
 
 .kontakt-heading h2 {
@@ -829,6 +934,14 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.kontakt-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(6px);
 }
 
 .kontakt-icon {
@@ -1018,6 +1131,46 @@ img {
 }
 
 @media (max-width: 640px) {
+  /* Simple fade-in only on mobile for smooth performance */
+  .fade-up,
+  .fade-left,
+  .fade-right {
+    transform: none;
+    transition: opacity 0.8s ease;
+  }
+
+  .fade-up.visible,
+  .fade-left.visible,
+  .fade-right.visible {
+    transform: none;
+  }
+
+  .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #0d0d0d;
+  }
+
+  .site-header.scrolled {
+    background: #0d0d0d;
+  }
+
+  .contact-bar-box {
+    animation: none;
+    background: linear-gradient(135deg, #b91c1c, #dc2626);
+  }
+
+  .service-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .kontakt-item:hover,
+  .onas-feature:hover {
+    transform: none;
+    background: none;
+  }
+
   .container {
     width: min(100% - 24px, 1320px);
   }
