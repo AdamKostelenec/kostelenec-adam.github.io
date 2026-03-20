@@ -152,7 +152,7 @@ img {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: #ef4444;
+  color: #f0f0f0;
 }
 
 .main-nav a::after {
@@ -1015,16 +1015,24 @@ img {
   }
 
   .site-header {
-    padding: 18px 0;
+    padding: 10px 0;
+  }
+
+  .logo-img {
+    height: 36px;
   }
 
   .logo a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .header-btn {
-    padding: 11px 18px;
-    font-size: 0.95rem;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .scroll-progress {
+    margin-top: 10px;
   }
 
   .hero {
