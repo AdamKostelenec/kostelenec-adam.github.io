@@ -544,6 +544,15 @@ img {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+.service-card-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+  max-width: 280px;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* KONTAKTNÍ BAR */
 .contact-bar {
   padding: 80px 0;
