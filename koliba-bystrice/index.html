@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>Koliba Bystřice – Restaurace & Ubytování v Beskydech</title>
+  <meta name="description" content="Koliba Bystřice – Restaurace zaměřená na rodinné oslavy, firemní večírky, svatby. Víkendová pizza, ubytování pro 16 osob v srdci Slezských Beskyd." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v22.0"></script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="#">
+        <span class="logo-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/><path d="M4.14 15.08C2.62 15.65 1.5 16.43 1.5 17.5 1.5 19.43 5.86 21 11.25 21s9.75-1.57 9.75-3.5c0-1.07-1.12-1.85-2.64-2.42"/></svg></span>
+        <span class="logo-text">Koliba <em>Bystřice</em></span>
+      </a>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Hlavní navigace">
+      <a href="#uvod" class="active">Úvod</a>
+      <a href="#nabidka">Nabídka</a>
+      <a href="#jidelnicek">Jídelníček</a>
+      <a href="#ubytovani">Ubytování</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#kontakt" class="header-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Rezervace
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="uvod" class="hero-section">
+    <div class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+
+      <div class="hero-content">
+        <span class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          Slezské Beskydy · 540 m n. m.
+        </span>
+
+        <h1 class="reveal stagger-1">
+          <span class="hero-line">Koliba</span>
+          <span class="hero-line accent">Bystřice</span>
+        </h1>
+
+        <p class="hero-subtitle reveal stagger-2">
+          Restaurace · Oslavy · Ubytování
+        </p>
+
+        <div class="hero-buttons reveal stagger-3">
+          <a href="#jidelnicek" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Jídelníček
+          </a>
+          <a href="#kontakt" class="btn btn-secondary">Kontaktujte nás</a>
+        </div>
+
+        <div class="hero-scroll-hint reveal stagger-4">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text reveal-scroll">
+          <span class="section-label">O KOLIBĚ</span>
+          <h2>Místo pro skvělé jídlo<br><strong>a nezapomenutelné oslavy.</strong></h2>
+          <p>
+            Jsme restaurace zaměřená na <strong>rodinné a firemní oslavy, večírky a svatby</strong>.
+            Nabízíme útulné prostředí horské koliby s krásným panoramatickým výhledem
+            do údolí řeky Olše.
+          </p>
+          <p>
+            O víkendech připravujeme <strong>výbornou pizzu</strong> a další pochutiny.
+            K dispozici máme prostorné posezení i obecní hřiště pro
+            <strong>volejbal</strong> a <strong>nohejbal</strong>.
+          </p>
+        </div>
+
+        <div class="intro-cards reveal-scroll stagger-2">
+          <div class="intro-card">
+            <div class="intro-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="M2 16l20 6-6-20A20 20 0 0 0 2 16"/><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"/></svg></div>
+            <div>
+              <strong>Víkendová pizza</strong>
+              <p>Pátek – Neděle</p>
+            </div>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div>
+              <strong>Oslavy & Svatby</strong>
+              <p>Prostor pro akce na míru</p>
+            </div>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <div>
+              <strong>Sport & Zábava</strong>
+              <p>Hřiště, trampolína, dětský koutek</p>
+            </div>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg></div>
+            <div>
+              <strong>Turistika</strong>
+              <p>Stezky na Loučku, Filipku a Chatu Hrádek</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NABÍDKA -->
+  <section id="nabidka" class="services-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">CO U NÁS ZAŽIJETE</span>
+        <h2>Naše nabídka</h2>
+        <p>Od rodinných oslav přes firemní akce až po klidný víkend s výborným jídlem v srdci Beskyd.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal-scroll stagger-1">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+            <h3>Restaurace</h3>
+            <p>Stylová restaurace v horské kolibě s domácí kuchyní a víkendovou nabídkou.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-2">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <h3>Svatby & Oslavy</h3>
+            <p>Ideální místo pro rodinné oslavy, svatby, narozeniny a společenské akce.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-3">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Firemní akce</h3>
+            <p>Firemní večírky, teambuildingy a vaječiny s kompletním zázemím.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-1">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="M2 16l20 6-6-20A20 20 0 0 0 2 16"/><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"/></svg></div>
+            <h3>Víkendová pizza</h3>
+            <p>Každý víkend výborná pizza z pece. Přijďte ochutnat!</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-2">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <h3>Sport & Aktivity</h3>
+            <p>Volejbal, nohejbal, trampolína a dětské hřiště přímo u koliby.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-3">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <h3>Turistika</h3>
+            <p>Výchozí bod na Loučku, Filipku a Chatu Hrádek v Slezských Beskydech.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JÍDELNÍČEK -->
+  <section id="jidelnicek" class="menu-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">JÍDELNÍČEK</span>
+        <h2>Co u nás ochutnáte</h2>
+        <p>Připravujeme pokrmy z čerstvých surovin s láskou a péčí. Víkendová nabídka pizzy a grilovaných specialit.</p>
+      </div>
+
+      <div class="menu-tabs reveal-scroll">
+        <button class="menu-tab active" data-tab="predkrmy">Předkrmy</button>
+        <button class="menu-tab" data-tab="polevky">Polévky</button>
+        <button class="menu-tab" data-tab="hlavni">Hlavní jídla</button>
+        <button class="menu-tab" data-tab="pizza">Pizza</button>
+        <button class="menu-tab" data-tab="dezerty">Dezerty</button>
+        <button class="menu-tab" data-tab="napoje">Nápoje</button>
+      </div>
+
+      <div class="menu-content">
+
+        <!-- PŘEDKRMY -->
+        <div class="menu-panel active" id="panel-predkrmy">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Předkrmy</h3>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Nakládaný hermelín</h4>
+                <p>Hermelín marinovaný v oleji s papričkami a bylinkami, pečivo</p>
+              </div>
+              <span class="menu-price">89 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Bramboráčky s česnekem</h4>
+                <p>Domácí bramboráčky se zakysanou smetanou a čerstvým česnekem</p>
+              </div>
+              <span class="menu-price">79 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Topinky s česnekem</h4>
+                <p>Křupavé topinky natřené česnekem, s tatarským kečupem</p>
+              </div>
+              <span class="menu-price">69 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Utopenec</h4>
+                <p>Pikantní utopenci s cibulí, podáváno s chlebem</p>
+              </div>
+              <span class="menu-price">75 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Smažený sýr s brusinkami</h4>
+                <p>Hermelín v trojobalu, podávaný s brusinkovou omáčkou</p>
+              </div>
+              <span class="menu-price">119 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- POLÉVKY -->
+        <div class="menu-panel" id="panel-polevky">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Polévky</h3>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Gulášová polévka</h4>
+                <p>Vydatná hovězí gulášová polévka podávaná v chlebovém bochníku</p>
+              </div>
+              <span class="menu-price">85 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Česnečka</h4>
+                <p>Česneková polévka s uzeninou, bramborem a vejcem</p>
+              </div>
+              <span class="menu-price">65 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Kulajda</h4>
+                <p>Bramborová polévka s houbami, koprem a zastřeným vejcem</p>
+              </div>
+              <span class="menu-price">69 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Zelňačka</h4>
+                <p>Kyselá zelná polévka s klobáskou a zakysanou smetanou</p>
+              </div>
+              <span class="menu-price">65 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HLAVNÍ JÍDLA -->
+        <div class="menu-panel" id="panel-hlavni">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Hlavní jídla</h3>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Svíčková na smetaně</h4>
+                <p>Hovězí svíčková s knedlíkem, šlehačkou a brusinkami</p>
+              </div>
+              <span class="menu-price">189 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Vepřo-knedlo-zelo</h4>
+                <p>Pečená vepřová krkovice, houskový knedlík, dušené zelí</p>
+              </div>
+              <span class="menu-price">179 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Smažený řízek</h4>
+                <p>Vepřový řízek s bramborovým salátem</p>
+              </div>
+              <span class="menu-price">169 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Grilovaný kuřecí steak</h4>
+                <p>Kuřecí prso s grilovanou zeleninou a americkými brambory</p>
+              </div>
+              <span class="menu-price">185 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Hovězí guláš</h4>
+                <p>Hovězí guláš s houskovým knedlíkem a cibulkou</p>
+              </div>
+              <span class="menu-price">165 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Pstruh na másle</h4>
+                <p>Čerstvý pstruh pečený na másle s bramborovými kroketami</p>
+              </div>
+              <span class="menu-price">219 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Halušky s brynzou</h4>
+                <p>Bramborové halušky s brynzou a slaninou</p>
+              </div>
+              <span class="menu-price">145 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PIZZA -->
+        <div class="menu-panel" id="panel-pizza">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Pizza</h3>
+            <p class="menu-category-note">Dostupná pátek – neděle</p>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Margherita</h4>
+                <p>Rajčatový základ, mozzarella, bazalka</p>
+              </div>
+              <span class="menu-price">129 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Šunková</h4>
+                <p>Rajčatový základ, mozzarella, šunka</p>
+              </div>
+              <span class="menu-price">139 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Salámová</h4>
+                <p>Rajčatový základ, mozzarella, pikantní salám</p>
+              </div>
+              <span class="menu-price">139 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Hawai</h4>
+                <p>Rajčatový základ, mozzarella, šunka, ananas</p>
+              </div>
+              <span class="menu-price">145 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Quattro Formaggi</h4>
+                <p>Smetanový základ, mozzarella, gorgonzola, parmazán, eidam</p>
+              </div>
+              <span class="menu-price">155 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Koliba Speciál</h4>
+                <p>Rajčatový základ, mozzarella, klobása, cibule, feferonky, česnek</p>
+              </div>
+              <span class="menu-price">159 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Vegetariánská</h4>
+                <p>Rajčatový základ, mozzarella, paprika, žampiony, kukuřice, olivy</p>
+              </div>
+              <span class="menu-price">145 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Kuřecí BBQ</h4>
+                <p>BBQ základ, mozzarella, kuřecí maso, červená cibule, kukuřice</p>
+              </div>
+              <span class="menu-price">155 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEZERTY -->
+        <div class="menu-panel" id="panel-dezerty">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Dezerty</h3>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Palačinky s Nutellou</h4>
+                <p>Domácí palačinky s Nutellou, šlehačkou a ovocem</p>
+              </div>
+              <span class="menu-price">89 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Jablečný štrúdl</h4>
+                <p>Teplý štrúdl s vanilkovým zmrzlinovým kopečkem</p>
+              </div>
+              <span class="menu-price">79 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info">
+                <h4>Lívance s marmeládou</h4>
+                <p>Tři domácí lívance s marmeládou a tvarohem</p>
+              </div>
+              <span class="menu-price">85 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NÁPOJE -->
+        <div class="menu-panel" id="panel-napoje">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Nápoje</h3>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items menu-items-drinks">
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Radegast 12° (0,5l)</h4></div>
+              <span class="menu-price">45 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Pilsner Urquell (0,5l)</h4></div>
+              <span class="menu-price">49 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Birell (0,5l)</h4></div>
+              <span class="menu-price">35 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Kofola (0,3l)</h4></div>
+              <span class="menu-price">35 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Coca-Cola / Fanta / Sprite (0,33l)</h4></div>
+              <span class="menu-price">39 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Domácí limonáda</h4></div>
+              <span class="menu-price">49 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Espresso</h4></div>
+              <span class="menu-price">45 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Cappuccino</h4></div>
+              <span class="menu-price">55 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Čaj</h4></div>
+              <span class="menu-price">35 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Slivovice (0,04l)</h4></div>
+              <span class="menu-price">45 Kč</span>
+            </div>
+            <div class="menu-item reveal-scroll">
+              <div class="menu-item-info"><h4>Víno bílé / červené (0,2l)</h4></div>
+              <span class="menu-price">45 Kč</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UBYTOVÁNÍ -->
+  <section id="ubytovani" class="ubytovani-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">UBYTOVÁNÍ</span>
+        <h2>Přespěte v srdci Beskyd</h2>
+        <p>Pronájem celé koliby pro skupiny až 16 osob – ideální pro oslavy s přespáním.</p>
+      </div>
+
+      <div class="ubytovani-grid">
+        <div class="ubytovani-card reveal-scroll stagger-1">
+          <div class="ubytovani-card-number">4×</div>
+          <h3>Čtyřlůžkové pokoje</h3>
+          <p>Celkem 16 lůžek v útulných pokojích s výhledem do přírody.</p>
+        </div>
+
+        <div class="ubytovani-card reveal-scroll stagger-2">
+          <div class="ubytovani-card-number">3 000</div>
+          <h3>Kč / noc za kolibu</h3>
+          <p>Celá koliba jen pro vás. Týdenní pobyt od 10 000 Kč.</p>
+        </div>
+
+        <div class="ubytovani-card reveal-scroll stagger-3">
+          <div class="ubytovani-card-number"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>V ceně zahrnuto</h3>
+          <p>Energie, povlečení, poplatky. Možnost snídaně, polopenze i plné penze.</p>
+        </div>
+      </div>
+
+      <div class="ubytovani-features reveal-scroll">
+        <div class="ubytovani-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Parkoviště
+        </div>
+        <div class="ubytovani-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Kuchyňka
+        </div>
+        <div class="ubytovani-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Dětské hřiště
+        </div>
+        <div class="ubytovani-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Trampolína
+        </div>
+        <div class="ubytovani-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Sportovní hřiště
+        </div>
+        <div class="ubytovani-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Catering
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal-scroll">
+        <h2>Plánujete oslavu nebo akci?</h2>
+        <p>Kontaktujte nás a domluvíme vše na míru – od menu přes ubytování až po program.</p>
+        <div class="cta-buttons">
+          <a href="tel:+420604790330" class="btn btn-primary btn-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (+420) 604 790 330
+          </a>
+          <a href="mailto:bury.martina@gmail.com" class="btn btn-secondary btn-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Napište nám
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACEBOOK -->
+  <section id="aktuality" class="facebook-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">AKTUALITY</span>
+        <h2>Sledujte nás na Facebooku</h2>
+        <p>Nejnovější příspěvky, akce a novinky z naší koliby.</p>
+      </div>
+
+      <div class="facebook-wrapper">
+        <div class="facebook-card reveal-scroll">
+          <div id="fb-root"></div>
+          <div class="fb-page"
+            data-href="https://www.facebook.com/KolibaBystricePaseky/"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="500"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/KolibaBystricePaseky/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/KolibaBystricePaseky/">Koliba Bystřice Paseky</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="facebook-side">
+          <div class="facebook-info-card reveal-scroll stagger-1">
+            <div class="facebook-info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Akce a oslavy</h3>
+            <p>Sledujte naši stránku, kde zveřejňujeme pozvánky na nadcházející akce a speciální víkendové nabídky.</p>
+          </div>
+
+          <div class="facebook-info-card reveal-scroll stagger-2">
+            <div class="facebook-info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Otevírací doba</h3>
+            <p>Restaurace otevřena pátek – neděle. Pro soukromé akce a oslavy kdykoliv dle domluvy.</p>
+          </div>
+
+          <div class="facebook-info-card reveal-scroll stagger-3">
+            <div class="facebook-info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Rezervace</h3>
+            <p>Zavolejte nám na <a href="tel:+420604790330"><strong>(+420) 604 790 330</strong></a> nebo napište na Facebook.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="kontakt-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">KONTAKT</span>
+        <h2>Kde nás najdete</h2>
+      </div>
+
+      <div class="kontakt-grid">
+        <div class="kontakt-map reveal-scroll">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.5!2d18.7556!3d49.6267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714111e3623b8fb%3A0x1ba57efc5cbb1c52!2sKoliba%20Byst%C5%99ice%20Paseky!5e0!3m2!1scs!2scz"
+            width="100%" height="100%" style="border:0; border-radius: 16px;" allowfullscreen="" loading="eager"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="kontakt-info reveal-scroll stagger-1">
+          <div class="kontakt-item">
+            <div class="kontakt-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Adresa</strong>
+              <p>Bystřice 1071<br>739 95 Bystřice nad Olší</p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Telefon</strong>
+              <p><a href="tel:+420604790330">(+420) 604 790 330</a></p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>E-mail</strong>
+              <p><a href="mailto:bury.martina@gmail.com">bury.martina@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div>
+              <strong>Facebook</strong>
+              <p><a href="https://www.facebook.com/KolibaBystricePaseky" target="_blank" rel="noopener noreferrer">Koliba Bystřice Paseky</a></p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>Otevírací doba restaurace</strong>
+              <p>Pátek – Neděle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo">Koliba <em>Bystřice</em></span>
+      <p>Restaurace & Ubytování v Beskydech</p>
+    </div>
+    <div class="footer-right">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="https://adamkostelenec.cz" target="_blank" rel="noopener noreferrer">Adam Kostelenec.</a> Všechna práva vyhrazena.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script>
+  // --- Scroll progress ---
+  const progressBar = document.getElementById("scrollProgressBar");
+  const header = document.querySelector(".site-header");
+
+  function updateScroll() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.transform = `scaleX(${docHeight > 0 ? scrollTop / docHeight : 0})`;
+    header.classList.toggle("scrolled", scrollTop > 60);
+  }
+
+  // --- Active nav ---
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll(".main-nav a");
+
+  function updateNav() {
+    let current = "";
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 200) current = s.id;
+    });
+    navLinks.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + current));
+  }
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => { updateScroll(); updateNav(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener("load", () => { updateScroll(); updateNav(); });
+
+  // --- Scroll reveal ---
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+
+  document.querySelectorAll(".reveal-scroll, .reveal").forEach(el => {
+    if (el.closest(".hero")) {
+      setTimeout(() => el.classList.add("visible"), 100);
+    } else {
+      revealObserver.observe(el);
+    }
+  });
+
+  // --- Hero parallax ---
+  const hero = document.querySelector(".hero");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < window.innerHeight) {
+      hero.style.setProperty("--parallax", `${window.scrollY * 0.3}px`);
+    }
+  }, { passive: true });
+
+  // --- Menu tabs ---
+  const tabs = document.querySelectorAll(".menu-tab");
+  const panels = document.querySelectorAll(".menu-panel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      panels.forEach(p => {
+        p.classList.remove("active");
+        if (p.id === "panel-" + tab.dataset.tab) {
+          p.classList.add("active");
+          // Re-observe items for scroll reveal
+          p.querySelectorAll(".reveal-scroll:not(.visible)").forEach(el => revealObserver.observe(el));
+          // Immediately reveal visible items
+          p.querySelectorAll(".reveal-scroll").forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight) {
+              setTimeout(() => el.classList.add("visible"), 50);
+            }
+          });
+        }
+      });
+    });
+  });
+
+  // --- Smooth scroll ---
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+  // --- Mobile menu ---
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("open");
+    mainNav.classList.toggle("open");
+  });
+
+  mainNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("open");
+      mainNav.classList.remove("open");
+    });
+  });
+
+  // --- Floating particles in hero ---
+  const particlesContainer = document.getElementById("heroParticles");
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+    p.style.left = Math.random() * 100 + "%";
+    p.style.top = Math.random() * 100 + "%";
+    p.style.animationDelay = Math.random() * 6 + "s";
+    p.style.animationDuration = (4 + Math.random() * 6) + "s";
+    p.style.width = p.style.height = (2 + Math.random() * 4) + "px";
+    particlesContainer.appendChild(p);
+  }
+</script>
+</html>
