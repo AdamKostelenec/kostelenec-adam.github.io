@@ -890,13 +890,12 @@ img {
   border-radius: var(--radius-lg);
   padding: 24px;
   overflow: hidden;
-  max-width: 100%;
 }
 
 .facebook-card .fb-page,
 .facebook-card .fb-page > span,
 .facebook-card .fb-page > span > iframe {
-  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .facebook-side {
