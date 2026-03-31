@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>Ranč na Křivé – Restaurace v Bystřici nad Olší</title>
+  <meta name="description" content="Restaurace Ranč na Křivé – Domácí česká, slezská a moravská kuchyně. Oslavy, svatby, firemní akce. Bystřice nad Olší." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://www.google.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v22.0"></script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="#">
+        <img src="logo.jpg" alt="Ranč na Křivé" class="logo-img">
+      </a>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Hlavní navigace">
+      <a href="#uvod" class="active">Úvod</a>
+      <a href="#nabidka">Nabídka</a>
+      <a href="#jidelnicek">Jídelníček</a>
+      <a href="#akce">Akce</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#kontakt" class="header-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Rezervace
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="uvod" class="hero-section">
+    <div class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+
+      <svg class="hero-curve" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <path d="M0,200 C360,80 720,160 1080,60 C1260,10 1380,40 1440,80 L1440,200 Z" fill="rgba(255,255,255,0.06)"/>
+        <path d="M0,200 C300,120 600,180 900,100 C1100,50 1300,70 1440,120 L1440,200 Z" fill="rgba(255,255,255,0.04)"/>
+      </svg>
+
+      <div class="hero-content">
+        <span class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          Bystřice nad Olší · Bystřice 1218
+        </span>
+
+        <h1 class="reveal stagger-1">
+          <span class="hero-line">Ranč</span>
+          <span class="hero-line accent">na Křivé</span>
+        </h1>
+
+        <p class="hero-tagline reveal stagger-2">
+          „Láska prochází žaludkem"
+        </p>
+
+        <p class="hero-subtitle reveal stagger-2">
+          Domácí kuchyně · Oslavy · Akce
+        </p>
+
+        <div class="hero-buttons reveal stagger-3">
+          <a href="#jidelnicek" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Jídelníček
+          </a>
+          <a href="#kontakt" class="btn btn-secondary">Kontaktujte nás</a>
+        </div>
+
+        <div class="hero-scroll-hint reveal stagger-4">
+          <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">O RESTAURACI</span>
+        <h2>Domácí kuchyně s láskou<br>a štědrými porcemi</h2>
+        <p>
+          V příjemném prostředí naší restaurace v malebné obci Bystřice nad Olší si vychutnáte
+          tradiční českou, slezskou a moravskou kuchyni. Vaříme z čerstvých
+          surovin a na porcích rozhodně nešetříme.
+        </p>
+      </div>
+
+      <div class="intro-features">
+        <div class="intro-feature reveal-scroll stagger-1">
+          <div class="intro-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Domácí kuchyně</h3>
+          <p>Česká, slezská a moravská jídla ze sezónních surovin</p>
+        </div>
+
+        <div class="intro-feature reveal-scroll stagger-2">
+          <div class="intro-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Až 50 hostů</h3>
+          <p>Hlavní sál + soukromý salónek pro 12 osob</p>
+        </div>
+
+        <div class="intro-feature reveal-scroll stagger-3">
+          <div class="intro-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Oslavy & Svatby</h3>
+          <p>Akce na míru s kompletním servisem a cateringem</p>
+        </div>
+
+        <div class="intro-feature reveal-scroll stagger-4">
+          <div class="intro-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Zahradní terasa</h3>
+          <p>Klidné posezení v přírodě s pavilonem a krbem</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NABÍDKA -->
+  <section id="nabidka" class="services-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">CO VÁM NABÍZÍME</span>
+        <h2>Naše služby</h2>
+        <p>Od domácího oběda přes oslavy až po firemní akce s kompletním servisem.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal-scroll stagger-1">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+            <h3>Restaurace</h3>
+            <p>Domácí česká, slezská a moravská kuchyně se štědrými porcemi.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-2">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <h3>Svatby & Oslavy</h3>
+            <p>Narozeniny, promoce, křtiny, výročí – připravíme vše na míru.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-3">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Firemní akce</h3>
+            <p>Večírky, teambuildingy, školení a semináře s kompletním zázemím.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-1">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>Polední menu</h3>
+            <p>Denní nabídka obědových jídel za zvýhodněné ceny.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-2">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Grilování</h3>
+            <p>Letní grilování na zahradě s pavilonem a krbem.</p>
+          </div>
+        </article>
+
+        <article class="service-card reveal-scroll stagger-3">
+          <div class="service-card-inner">
+            <div class="service-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Živá hudba</h3>
+            <p>Country večery, hudební akce a tematické události.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JÍDELNÍČEK -->
+  <section id="jidelnicek" class="menu-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">JÍDELNÍČEK</span>
+        <h2>Co u nás ochutnáte</h2>
+        <p>Tradiční domácí kuchyně z čerstvých surovin. Vaříme s láskou a na porcích nešetříme.</p>
+      </div>
+
+      <div class="menu-tabs reveal-scroll">
+        <button class="menu-tab active" data-tab="predkrmy">Předkrmy</button>
+        <button class="menu-tab" data-tab="polevky">Polévky</button>
+        <button class="menu-tab" data-tab="hlavni">Hlavní jídla</button>
+        <button class="menu-tab" data-tab="bezmasajidla">Bezmasá jídla</button>
+        <button class="menu-tab" data-tab="prilohy">Přílohy & Saláty</button>
+        <button class="menu-tab" data-tab="napoje">Nápoje</button>
+      </div>
+
+      <div class="menu-content">
+
+        <div class="menu-panel active" id="panel-predkrmy">
+          <div class="menu-category-header reveal-scroll">
+            <h3>Studené a teplé předkrmy</h3>
+            <div class="menu-divider"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Nakládaný hermelín</h4><p>V oleji s papričkami a bylinkami, pečivo</p></div><span class="menu-price">95 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Utopenec</h4><p>Pikantní utopenci s cibulí, chléb</p></div><span class="menu-price">85 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Topinky s česnekem</h4><p>Křupavé topinky, tatarský kečup</p></div><span class="menu-price">75 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Bramboráčky</h4><p>Domácí bramboráčky se zakysanou smetanou</p></div><span class="menu-price">85 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Smažený hermelín</h4><p>V trojobalu s brusinkami a tatarskou omáčkou</p></div><span class="menu-price">125 Kč</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-polevky">
+          <div class="menu-category-header reveal-scroll"><h3>Polévky</h3><div class="menu-divider"></div></div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Gulášová polévka</h4><p>Hovězí gulášová v chlebovém bochníku</p></div><span class="menu-price">89 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Česnečka</h4><p>S uzeninou, bramborem a vejcem</p></div><span class="menu-price">65 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Zelňačka</h4><p>Kyselá zelná polévka s klobáskou</p></div><span class="menu-price">65 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Kulajda</h4><p>Bramborová s houbami, koprem a zastřeným vejcem</p></div><span class="menu-price">69 Kč</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-hlavni">
+          <div class="menu-category-header reveal-scroll"><h3>Hlavní jídla</h3><div class="menu-divider"></div></div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Svíčková na smetaně</h4><p>S houskovým knedlíkem, šlehačkou a brusinkami</p></div><span class="menu-price">195 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Vepřo-knedlo-zelo</h4><p>Pečená krkovice, houskový knedlík, dušené zelí</p></div><span class="menu-price">185 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Smažený řízek</h4><p>Vepřový řízek s bramborovým salátem</p></div><span class="menu-price">175 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Kuřecí steak na grilu</h4><p>S grilovanou zeleninou a americkými brambory</p></div><span class="menu-price">189 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Hovězí guláš</h4><p>S houskovým knedlíkem a cibulkou</p></div><span class="menu-price">169 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Halušky s brynzou</h4><p>Bramborové halušky s brynzou a slaninou</p></div><span class="menu-price">155 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Pečená kachna</h4><p>Se zelím a knedlíkem (na objednávku)</p></div><span class="menu-price">249 Kč</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-bezmasajidla">
+          <div class="menu-category-header reveal-scroll"><h3>Bezmasá jídla</h3><div class="menu-divider"></div></div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Smažený sýr</h4><p>Eidam v trojobalu, hranolky, tatarská omáčka</p></div><span class="menu-price">145 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Bramborové placky</h4><p>S kyselým zelím a zakysanou smetanou</p></div><span class="menu-price">129 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Grilovaná zelenina</h4><p>Sezónní zelenina s bylinkovým máslem a pečivem</p></div><span class="menu-price">139 Kč</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-prilohy">
+          <div class="menu-category-header reveal-scroll"><h3>Přílohy & Saláty</h3><div class="menu-divider"></div></div>
+          <div class="menu-items">
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Hranolky</h4></div><span class="menu-price">45 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Vařené brambory</h4></div><span class="menu-price">35 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Houskový knedlík</h4></div><span class="menu-price">35 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Americké brambory</h4></div><span class="menu-price">49 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Bramborový salát</h4></div><span class="menu-price">45 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Míchaný salát</h4><p>Čerstvá sezónní zelenina</p></div><span class="menu-price">55 Kč</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-napoje">
+          <div class="menu-category-header reveal-scroll"><h3>Nápoje</h3><div class="menu-divider"></div></div>
+          <div class="menu-items menu-items-drinks">
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Radegast 12° (0,5l)</h4></div><span class="menu-price">45 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Pilsner Urquell (0,5l)</h4></div><span class="menu-price">49 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Birell (0,5l)</h4></div><span class="menu-price">35 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Kofola (0,3l)</h4></div><span class="menu-price">35 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Coca-Cola / Fanta / Sprite (0,33l)</h4></div><span class="menu-price">39 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Domácí limonáda</h4></div><span class="menu-price">49 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Espresso</h4></div><span class="menu-price">45 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Cappuccino</h4></div><span class="menu-price">55 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Slivovice (0,04l)</h4></div><span class="menu-price">45 Kč</span></div>
+            <div class="menu-item reveal-scroll"><div class="menu-item-info"><h4>Víno bílé / červené (0,2l)</h4></div><span class="menu-price">45 Kč</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AKCE / FACEBOOK -->
+  <section id="akce" class="facebook-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">AKTUALITY & AKCE</span>
+        <h2>Co se u nás děje</h2>
+        <p>Sledujte naši Facebook stránku pro aktuální nabídky, akce a novinky.</p>
+      </div>
+
+      <div class="facebook-wrapper">
+        <div class="facebook-card reveal-scroll">
+          <div id="fb-root"></div>
+          <div class="fb-page"
+            data-href="https://www.facebook.com/RancNaKrive/"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="500"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/RancNaKrive/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/RancNaKrive/">Ranč na Křivé</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="facebook-side">
+          <div class="facebook-info-card reveal-scroll stagger-1">
+            <div class="facebook-info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Otevírací doba</h3>
+            <div class="hours-grid">
+              <span>Pondělí</span><span>Zavřeno</span>
+              <span>Úterý – Čtvrtek</span><span>16:00 – 22:00</span>
+              <span>Pátek</span><span>16:00 – 00:00</span>
+              <span>Sobota</span><span>15:00 – 00:00</span>
+              <span>Neděle</span><span>13:00 – 22:00</span>
+            </div>
+          </div>
+
+          <div class="facebook-info-card reveal-scroll stagger-2">
+            <div class="facebook-info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Rezervace</h3>
+            <p>Zavolejte nám na <a href="tel:+420607613866"><strong>(+420) 607 613 866</strong></a></p>
+          </div>
+
+          <div class="facebook-info-card reveal-scroll stagger-3">
+            <div class="facebook-info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Vybavení</h3>
+            <p>Wi-Fi, TV, šipky, dětský koutek, bezbariérový přístup, parkování, platba kartou i QR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal-scroll">
+        <!-- Decorative curve in CTA too -->
+        <svg class="cta-curve" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,120 C480,30 960,90 1440,20 L1440,120 Z" fill="rgba(255,255,255,0.06)"/>
+        </svg>
+        <h2>Plánujete oslavu, svatbu nebo akci?</h2>
+        <p>Kontaktujte nás a domluvíme vše na míru – od menu přes prostory až po program.</p>
+        <div class="cta-buttons">
+          <a href="tel:+420607613866" class="btn btn-primary btn-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (+420) 607 613 866
+          </a>
+          <a href="mailto:rancnakrive@seznam.cz" class="btn btn-secondary btn-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Napište nám
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="kontakt-section">
+    <div class="container">
+      <div class="section-header reveal-scroll">
+        <span class="section-label">KONTAKT</span>
+        <h2>Kde nás najdete</h2>
+      </div>
+
+      <div class="kontakt-grid">
+        <div class="kontakt-map reveal-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585!2d18.75!3d49.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714111e3623b8fb%3A0x8a1234567890!2sRestaurace+Ran%C4%8D+na+K%C5%99iv%C3%A9!5e0!3m2!1scs!2scz"
+            width="100%" height="100%" style="border:0; border-radius: 16px;" allowfullscreen="" loading="eager"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="kontakt-info reveal-right stagger-1">
+          <div class="kontakt-item">
+            <div class="kontakt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><strong>Adresa</strong><p>Bystřice nad Olší 1218<br>739 95</p></div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><strong>Telefon</strong><p><a href="tel:+420607613866">(+420) 607 613 866</a><br><a href="tel:+420776599075">(+420) 776 599 075</a></p></div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><strong>E-mail</strong><p><a href="mailto:rancnakrive@seznam.cz">rancnakrive@seznam.cz</a></p></div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+            <div><strong>Facebook</strong><p><a href="https://www.facebook.com/RancNaKrive/" target="_blank" rel="noopener noreferrer">Ranč na Křivé</a></p></div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <div><strong>Platba</strong><p>Hotově, kartou, QR platba</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <img src="logo.jpg" alt="Ranč na Křivé" class="footer-logo-img">
+      <p>Restaurace v Bystřici nad Olší</p>
+    </div>
+    <div class="footer-right">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="https://adamkostelenec.cz" target="_blank" rel="noopener noreferrer">Adam Kostelenec.</a> Všechna práva vyhrazena.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script>
+  // Scroll progress + header
+  const progressBar = document.getElementById("scrollProgressBar");
+  const header = document.querySelector(".site-header");
+  function updateScroll() {
+    const s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.transform = `scaleX(${d > 0 ? s / d : 0})`;
+    header.classList.toggle("scrolled", s > 60);
+  }
+
+  // Active nav
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll(".main-nav a");
+  function updateNav() {
+    let c = "";
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) c = s.id; });
+    navLinks.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + c));
+  }
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) { requestAnimationFrame(() => { updateScroll(); updateNav(); ticking = false; }); ticking = true; }
+  }, { passive: true });
+  window.addEventListener("load", () => { updateScroll(); updateNav(); });
+
+  // Scroll reveal
+  const ro = new IntersectionObserver(e => {
+    e.forEach(en => { if (en.isIntersecting) { en.target.classList.add("visible"); ro.unobserve(en.target); } });
+  }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal-scroll, .reveal, .reveal-left, .reveal-right").forEach(el => {
+    el.closest(".hero") ? setTimeout(() => el.classList.add("visible"), 100) : ro.observe(el);
+  });
+
+  // Hero parallax
+  const hero = document.querySelector(".hero");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < window.innerHeight) hero.style.setProperty("--parallax", `${window.scrollY * 0.3}px`);
+  }, { passive: true });
+
+  // Menu tabs
+  document.querySelectorAll(".menu-tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".menu-tab").forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      document.querySelectorAll(".menu-panel").forEach(p => {
+        p.classList.remove("active");
+        if (p.id === "panel-" + tab.dataset.tab) {
+          p.classList.add("active");
+          p.querySelectorAll(".reveal-scroll").forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight) setTimeout(() => el.classList.add("visible"), 50);
+            else ro.observe(el);
+          });
+        }
+      });
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+      const t = document.querySelector(link.getAttribute("href"));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    });
+  });
+
+  // Mobile menu
+  const menuToggle = document.getElementById("menuToggle"), mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", () => { menuToggle.classList.toggle("open"); mainNav.classList.toggle("open"); });
+  mainNav.querySelectorAll("a").forEach(l => l.addEventListener("click", () => { menuToggle.classList.remove("open"); mainNav.classList.remove("open"); }));
+
+  // Particles
+  const pc = document.getElementById("heroParticles");
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement("div"); p.className = "particle";
+    p.style.left = Math.random()*100+"%"; p.style.top = Math.random()*100+"%";
+    p.style.animationDelay = Math.random()*6+"s"; p.style.animationDuration = (4+Math.random()*6)+"s";
+    p.style.width = p.style.height = (2+Math.random()*4)+"px"; pc.appendChild(p);
+  }
+</script>
+</html>
