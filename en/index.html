@@ -194,8 +194,19 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
     revealEls.forEach((el) => io.observe(el));
+    /* Safety: reveal anything in the viewport in case the observer misses */
+    const revealInView = () => {
+      revealEls.forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+          el.classList.add('is-visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealInView, { passive: true });
+    window.addEventListener('load', revealInView);
+    revealInView();
   } else {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
