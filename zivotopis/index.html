@@ -4,17 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-  <title>Bc. Adam Kostelenec</title>
-  <meta name="description" content="Stránka Adama Kostelence" />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Michroma&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <title>Životopis — Bc. Adam Kostelenec</title>
+  <meta name="description" content="Životopis Adama Kostelence — vývojář softwaru, C# / .NET, e-commerce a webová řešení." />
+  <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.setAttribute('data-theme', 'dark');</script>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Michroma&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-      <!--<strong>Kostelenec Adam</strong> -->
+    <div class="container">
+      <a href="/" class="brand">Adam<span>.</span>K</a>
       <nav aria-label="Hlavní navigace">
         <a href="/#projekty" target="_self">Projekty</a>
         <a href="/#o-mne" target="_self">O mně</a>
@@ -22,85 +23,89 @@
         <a href="/zivotopis" target="_self" rel="noopener">Životopis</a>
       </nav>
       <div class="upleft">
-      <button class="btn" id="languageToggle" aria-label="Přepnout jazyk">
-        <a href="/en/resume" target="_self" style="text-decoration: none;color: var(--fg);">EN</a>
-     </button>
-      <button class="btn" id="themeToggle" aria-label="Přepnout téma">
-        <img src="../light.png" alt="Ikona tématu" class="theme-icon"/>
-      </button>
+        <a href="/en/resume" target="_self" style="text-decoration:none;color:var(--fg);"><button class="btn" id="languageToggle" aria-label="Přepnout jazyk">EN</button></a>
+        <button class="btn" id="themeToggle" aria-label="Přepnout téma">
+          <img src="../light.png" alt="Ikona tématu" class="theme-icon"/>
+        </button>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
+    <section class="hero" data-reveal>
+      <span class="hero-badge"><span class="dot"></span> Hrádek, Moravskoslezský kraj</span>
       <h1>Životopis</h1>
-      <p class="muted"><strong>Bc. Adam Kostelenec</strong> · Hrádek, Moravskoslezský kraj</p>
+      <p class="hero-subtitle"><strong>Bc. Adam Kostelenec</strong> — vývojář softwaru, C# / .NET a e-commerce.</p>
     </section>
 
-    <section aria-labelledby="profil">
+    <section aria-labelledby="profil" data-reveal>
+      <span class="eyebrow">01 — Profil</span>
       <h2 id="profil">Profil</h2>
       <p>Student oboru Informační technologie na <strong>VŠB – Technické univerzitě Ostrava.</strong> Zaměřuji se na vývoj softwaru, webových řešení a automatizačních nástrojů. V praxi kombinuji technickou preciznost s důrazem na uživatelskou přívětivost a dlouhodobou udržitelnost. Primárně pracuji v <strong>C# (.NET)</strong> a v e-commerce integracích.</p>
-      <hr>
     </section>
 
-    <section aria-labelledby="zkusenosti">
+    <section aria-labelledby="zkusenosti" data-reveal>
+      <span class="eyebrow">02 — Kariéra</span>
       <h2 id="zkusenosti">Pracovní zkušenosti</h2>
 
-      <div class="card">
-        <strong>NANO Systems s.r.o.</strong> · Programátor softwaru<br>
-        <small class="muted">07/2024 – současnost · Třinec</small>
-        <ul>
-          <li>Kompletní vývoj aplikací pro platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong> od návrhu po nasazení.</li>
-          <li>Kompletní vývoj <strong>překladače XML feedů</strong> do cizích jazyků.</li>
-          <li>Práce s <strong>XML</strong> daty e-shopů (parsování, validace, transformace).</li>
-          <li>Integrace služeb přes <strong>REST API</strong>, úpravy šablon (CSS, JavaScript).</li>
-          <li>Automatizační nástroje: přepočty cen, výpočet DPH/VAT, další interní utility.</li>
-          <li>Dlouhodobá údržba a optimalizace s důrazem na spolehlivost a škálování.</li>
-        </ul>
-      </div>
+      <div class="timeline">
+        <div class="card">
+          <strong>NANO Systems s.r.o.</strong> · Programátor softwaru
+          <span class="period">07/2024 – současnost · Třinec</span>
+          <ul>
+            <li>Kompletní vývoj aplikací pro platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong> od návrhu po nasazení.</li>
+            <li>Kompletní vývoj <strong>překladače XML feedů</strong> do cizích jazyků.</li>
+            <li>Práce s <strong>XML</strong> daty e-shopů (parsování, validace, transformace).</li>
+            <li>Integrace služeb přes <strong>REST API</strong>, úpravy šablon (CSS, JavaScript).</li>
+            <li>Automatizační nástroje: přepočty cen, výpočet DPH/VAT, další interní utility.</li>
+            <li>Dlouhodobá údržba a optimalizace s důrazem na spolehlivost a škálování.</li>
+          </ul>
+        </div>
 
-      <div class="card">
-        <strong>Gamisport – Jeans s.r.o.</strong> · Vedoucí e-shopové části firmy (E-commerce & Shoptet)<br>
-        <small class="muted">06/2023 – 07/2024 · Třinec</small>
-        <ul>
-          <li>Správa a rozvoj e-shopu na platformě <strong>Shoptet</strong>, SEO a online marketing.</li>
-          <li>Vyjednávání s partnery a dodavateli, uzavírání obchodních dohod, vedení týmu.</li>
-          <li>Spoluzodpovědnost za migraci portfolia cca <strong>40 000 produktů</strong>.</li>
-        </ul>
+        <div class="card">
+          <strong>Gamisport – Jeans s.r.o.</strong> · Vedoucí e-shopové části firmy (E-commerce &amp; Shoptet)
+          <span class="period">06/2023 – 07/2024 · Třinec</span>
+          <ul>
+            <li>Správa a rozvoj e-shopu na platformě <strong>Shoptet</strong>, SEO a online marketing.</li>
+            <li>Vyjednávání s partnery a dodavateli, uzavírání obchodních dohod, vedení týmu.</li>
+            <li>Spoluzodpovědnost za migraci portfolia cca <strong>40 000 produktů</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Brigáda Cieslar s.r.o.</strong> · Pomocný pracovník na stavbě
+          <span class="period">06/2022 – 07/2022 · Bystřice</span>
+          <ul>
+            <li>Podpora stavebního týmu při výstavbě rodinných domů – příprava materiálu, úklid, drobné pomocné práce.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Brigáda BERNDORF BÄDERBAU s.r.o.</strong> · Pomocný pracovník ve výrobě
+          <span class="period">07/2022 – 08/2022 · Bystřice</span>
+          <ul>
+            <li>Podpora výrobního týmu při výrobě bazénů – montáž drobných komponentů, balení, manipulace s materiálem.</li>
+          </ul>
+        </div>
       </div>
-      <div class="card">
-        <strong>Brigáda Cieslar s.r.o</strong> · Pomocný pracovník na stavbě<br>
-        <small class="muted">06/2022 – 07/2022 · Bystřice</small>
-        <ul>
-          <li>Podpora stavebního týmu při výstavbě rodinných domů – příprava materiálu, úklid, drobné pomocné práce.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <strong>Brigáda BERNDORF BÄDERBAU s.r.o.</strong> · Pomocný pracovník ve výrobě<br>
-        <small class="muted">07/2022 – 08/2022 · Bystřice</small>
-        <ul>
-          <li>Podpora výrobního týmu při výrobě bazénů – montáž drobných komponentů, balení, manipulace s materiálem.</li>
-        </ul>
-      </div>
-      <hr>
     </section>
 
-    <section aria-labelledby="vzdelani">
+    <section aria-labelledby="vzdelani" data-reveal>
+      <span class="eyebrow">03 — Vzdělání</span>
       <h2 id="vzdelani">Vzdělání</h2>
       <ul>
         <li><strong>VŠB – Technická univerzita Ostrava</strong> · Ing., Informační technologie · 2026–2028 (probíhá)</li>
         <li><strong>VŠB – Technická univerzita Ostrava</strong> · Bc., Informační technologie · 2023–2026</li>
         <li><strong>Střední průmyslová škola Karviná</strong> · Informační technologie · 2019–2023 · Zakončeno maturitní zkouškou</li>
       </ul>
-      <hr>
     </section>
 
-   <section aria-labelledby="dovednosti">
+    <section aria-labelledby="dovednosti" data-reveal>
+      <span class="eyebrow">04 — Dovednosti</span>
       <h2 id="dovednosti">Dovednosti</h2>
       <ul>
         <li><strong>Backend / .NET:</strong> C#, .NET (.NET/ASP.NET Core), základní návrh API</li>
-        <li><strong>Integrace & formáty:</strong> REST API, XML/XSD, JSON, Shoptet API</li>
+        <li><strong>Integrace &amp; formáty:</strong> REST API, XML/XSD, JSON, Shoptet API</li>
         <li><strong>Databáze:</strong> Oracle Database, PL/SQL, základy SQL/optimalizace dotazů</li>
         <li><strong>Frontend / e-commerce:</strong> HTML5, CSS, JavaScript, React Native, WordPress, úpravy šablon Shoptet</li>
         <li><strong>Systémy:</strong> Windows Server, operační systémy (základy správy a síťování)</li>
@@ -110,32 +115,31 @@
         <li><strong>Návrh softwaru:</strong> návrhové principy a vzory, čitelnost a testovatelnost kódu</li>
         <li><strong>E-commerce praxe:</strong> práce s feedy, pricing/DPH automatizace, SEO základy</li>
       </ul>
-      <hr>
     </section>
 
-    <section aria-labelledby="jazyky">
+    <section aria-labelledby="jazyky" data-reveal>
+      <span class="eyebrow">05 — Jazyky</span>
       <h2 id="jazyky">Jazyky</h2>
-      <ul>
+      <ul class="pills">
         <li>Čeština — rodilý mluvčí</li>
-        <li>Angličtina — <strong>B2</strong></li>
+        <li>Angličtina — B2</li>
       </ul>
     </section>
   </main>
 
-<footer class="container">
-      <section class="soc" id="socials">
-        <h2>Najdete mě na</h2>
-        <ul class="socials">
-          <li><a href="https://github.com/AdamKostelenec" aria-label="GitHub" target="_blank" rel="noopener"></a></li>
-          <li><a href="https://www.linkedin.com/in/adamkostelenec/" aria-label="LinkedIn" target="_blank" rel="noopener"></a></li>
-          <li><a href="https://www.instagram.com/_kostelenec_adam_/" aria-label="Instagram" target="_blank" rel="noopener"></a></li>
-        </ul>
-      </section>
+  <footer class="container">
+    <section class="soc" id="socials">
+      <h2>Najdete mě na</h2>
+      <ul class="socials">
+        <li><a href="https://github.com/AdamKostelenec" aria-label="GitHub" target="_blank" rel="noopener"></a></li>
+        <li><a href="https://www.linkedin.com/in/adamkostelenec/" aria-label="LinkedIn" target="_blank" rel="noopener"></a></li>
+        <li><a href="https://www.instagram.com/_kostelenec_adam_/" aria-label="Instagram" target="_blank" rel="noopener"></a></li>
+      </ul>
+    </section>
     <div style="text-align:center;margin-top:1rem;">
       <small class="muted">© <span id="year"></span> <a href="https://adamkostelenec.cz" target="_blank" rel="noopener noreferrer">Adam Kostelenec</a></small>
     </div>
   </footer>
-
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -144,18 +148,18 @@ const btn = document.getElementById('themeToggle');
 const icon = document.querySelector('.theme-icon');
 const stored = localStorage.getItem('theme');
 
-if (stored === 'dark') {
-  root.setAttribute('data-theme', 'dark');
-  icon.src = '../dark.png';
-} else {
+if (stored === 'light') {
   root.removeAttribute('data-theme');
   icon.src = '../light.png';
+} else {
+  root.setAttribute('data-theme', 'dark');
+  icon.src = '../dark.png';
 }
 
 btn.addEventListener('click', () => {
   const isDark = root.getAttribute('data-theme') === 'dark';
   const next = isDark ? 'light' : 'dark';
-  
+
   if (next === 'dark') {
     root.setAttribute('data-theme', 'dark');
     icon.src = '../dark.png';
@@ -163,10 +167,25 @@ btn.addEventListener('click', () => {
     root.removeAttribute('data-theme');
     icon.src = '../light.png';
   }
-  
+
   localStorage.setItem('theme', next);
 });
-</script>
 
+/* Scroll reveal */
+const revealEls = document.querySelectorAll('[data-reveal]');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach((el) => io.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add('is-visible'));
+}
+</script>
 </body>
 </html>

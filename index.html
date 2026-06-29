@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-  <title>Adam Kostelenec</title>
-  <meta name="description" content="Stránka Adama Kostelence" />
+  <title>Bc. Adam Kostelenec — vývojář & tvůrce webů</title>
+  <meta name="description" content="Portfolio a životopis Adama Kostelence — vývojář softwaru a webových řešení, C# / .NET, e-commerce a moderní weby." />
+  <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.setAttribute('data-theme', 'dark');</script>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,8 @@
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <div class="container">
+      <a href="#" class="brand">Adam<span>.</span>K</a>
       <nav aria-label="Hlavní navigace">
         <a href="#projekty">Projekty</a>
         <a href="#o-mne">O mně</a>
@@ -21,7 +23,7 @@
         <a href="/zivotopis" target="_self">Životopis</a>
       </nav>
       <div class="upleft">
-        <a href="../en" target="_self" style="text-decoration: none;color: var(--fg);"><button class="btn" id="languageToggle" aria-label="Přepnout jazyk">EN</button></a>
+        <a href="../en" target="_self" style="text-decoration:none;color:var(--fg);"><button class="btn" id="languageToggle" aria-label="Přepnout jazyk">EN</button></a>
         <button class="btn" id="themeToggle" aria-label="Přepnout téma">
           <img src="light.png" alt="Ikona tématu" class="theme-icon"/>
         </button>
@@ -31,46 +33,58 @@
 
   <main class="container">
 
-    <div class="hero">
-      <h1>Adam Kostelenec</h1>
-      <p class="hero-subtitle">Vývojář &middot; Student &middot; Tvůrce webů</p>
-    </div>
+    <section class="hero" data-reveal>
+      <span class="hero-badge"><span class="dot"></span> Otevřený novým příležitostem</span>
+      <h1>Bc. Adam Kostelenec</h1>
+      <p class="hero-subtitle">Vývojář softwaru &amp; tvůrce webů. Stavím <strong>čistá, rychlá a udržitelná</strong> řešení v C# / .NET a na webu.</p>
+      <div class="hero-actions">
+        <a href="#projekty" class="btn-cta">Prohlédnout projekty</a>
+        <a href="#kontakt" class="btn-cta ghost">Kontaktovat mě</a>
+      </div>
+    </section>
 
-    <section id="projekty" aria-labelledby="nadpis-projekty">
+    <section id="projekty" aria-labelledby="nadpis-projekty" data-reveal>
+      <span class="eyebrow">01 — Tvorba</span>
       <h2 id="nadpis-projekty">Projekty</h2>
 
       <div class="projekty-grid">
 
         <div class="card projekt">
           <h3>Shoptet XML Translator</h3>
-          <small class="muted">C# · .NET · REST API · XML · 2024</small>
-          <p>Nástroj pro automatizovaný překlad produktových XML feedů do cizích jazyků...</p>
+          <div class="tags">
+            <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">REST API</span><span class="tag">XML</span>
+          </div>
+          <p>Nástroj pro automatizovaný překlad produktových XML feedů do cizích jazyků.</p>
         </div>
 
         <div class="card projekt">
           <h3>Activity tracking systém</h3>
-          <small class="muted">React Native · JS · API · 2025</small>
-          <p>Napodobenina aplikace Strava pro sledování aktivit a tras. Routing systém přes Google Maps API.</p>
+          <div class="tags">
+            <span class="tag">React Native</span><span class="tag">JS</span><span class="tag">API</span>
+          </div>
+          <p>Napodobenina aplikace Strava pro sledování aktivit a tras. Routing přes Google Maps API.</p>
         </div>
 
         <div class="card projekt">
           <h3>Webová stránka AutoDuoo.cz</h3>
-          <small class="muted">HTML · CSS · JavaScript</small>
-          <p>Webová stránka pro prodej a servis autodoo.cz.</p>
-          <a href="https://autoduoo.cz/" class="btn">Zobrazit web →</a>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+          <p>Webová stránka pro prodej a servis autoduoo.cz.</p>
+          <a href="https://autoduoo.cz/" class="btn" target="_blank" rel="noopener">Zobrazit web →</a>
         </div>
 
       </div>
-      <hr>
     </section>
 
-    <section id="o-mne" aria-labelledby="nadpis-omne">
+    <section id="o-mne" aria-labelledby="nadpis-omne" data-reveal>
+      <span class="eyebrow">02 — Profil</span>
       <h2 id="nadpis-omne">O mně</h2>
       <p>Jmenuji se <strong>Adam Kostelenec</strong> a jsem student Fakulty elektrotechniky a informatiky na <strong>VŠB – Technické univerzitě Ostrava</strong>, kde studuji obor <strong>Informační technologie</strong>.</p>
 
       <p>Už několik let se věnuji vývoji softwaru a webových řešení – od drobných nástrojů pro automatizaci až po plnohodnotné webové aplikace.</p>
 
-      <p>V současnosti působím jako <strong>programátor ve společnosti NANO Systems s.r.o.</strong>, kde zodpovídám za kompletní vývoj aplikací pro e-commerce platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong>.</p>
+      <p>V současnosti působím jako <strong>programátor ve společnosti NANO Systems s.r.o.</strong>, kde zodpovídám za kompletní vývoj aplikací pro e-commerce platformu <strong>Shoptet</strong> v jazyce <strong>C#</strong>:</p>
 
       <ul>
         <li>integrace dat pomocí <strong>REST API</strong>,</li>
@@ -90,34 +104,36 @@
 
       <hr>
       <p><strong>Shrnutí:</strong> Propojuji analytické myšlení s citem pro detail, rád vysvětluji složité věci jednoduše a největší radost mám, když moje řešení někomu skutečně usnadní práci.</p>
-      <hr>
     </section>
 
-    <section id="kontakt" aria-labelledby="nadpis-kontakt">
+    <section id="kontakt" aria-labelledby="nadpis-kontakt" data-reveal>
+      <span class="eyebrow">03 — Spojme se</span>
       <h2 id="nadpis-kontakt">Kontakt</h2>
-      <form id="contactForm" action="send.php" method="POST">
-        <div class="field">
-          <label for="name">Jméno</label>
-          <input id="name" name="name" type="text" required autocomplete="name" />
-        </div>
+      <div class="contact-card">
+        <form id="contactForm" action="send.php" method="POST">
+          <div class="field">
+            <label for="name">Jméno</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
 
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" required autocomplete="email" />
-        </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
 
-        <div class="field">
-          <label for="message">Zpráva</label>
-          <textarea id="message" name="message" rows="5" required style="resize: vertical;"></textarea>
-        </div>
+          <div class="field">
+            <label for="message">Zpráva</label>
+            <textarea id="message" name="message" rows="5" required style="resize: vertical;"></textarea>
+          </div>
 
-        <div class="hp" aria-hidden="true">
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
-        </div>
-        <button class="obtn" type="submit">Odeslat</button>
-        <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
-      </form>
+          <div class="hp" aria-hidden="true">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <button class="obtn" type="submit">Odeslat zprávu</button>
+          <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -143,12 +159,12 @@
     const icon  = document.querySelector('.theme-icon');
     const stored = localStorage.getItem('theme');
 
-    if (stored === 'dark') {
-      root.setAttribute('data-theme', 'dark');
-      icon.src = 'dark.png';
-    } else {
+    if (stored === 'light') {
       root.removeAttribute('data-theme');
       icon.src = 'light.png';
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      icon.src = 'dark.png';
     }
 
     btn.addEventListener('click', () => {
@@ -163,6 +179,22 @@
       }
       localStorage.setItem('theme', next);
     });
+
+    /* Scroll reveal */
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach((el) => io.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('is-visible'));
+    }
 
     const form = document.getElementById('contactForm');
     const statusEl = document.getElementById('formStatus');
