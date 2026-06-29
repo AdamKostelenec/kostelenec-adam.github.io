@@ -397,21 +397,58 @@ hr {
   font-size: 0.85rem;
 }
 
-/* ── Resume timeline ── */
-.timeline { position: relative; }
+/* ── Resume timeline ──
+   Čára (::before) i bod (::after) jsou potomky stejné karty se stejným
+   `left` + translateX(-50%), takže leží přesně na jedné ose. */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  --rail: -22px;     /* osa linky/bodu vůči levé hraně karty */
+}
 .timeline .card {
   position: relative;
   margin-bottom: 1.1rem;
-  border-left: 3px solid transparent;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+/* svislá čára (segment v každé kartě, přemosťuje mezeru k další) */
+.timeline .card::before {
+  content: "";
+  position: absolute;
+  left: var(--rail);
+  transform: translateX(-50%);
+  top: 0;
+  bottom: -1.1rem;
+  width: 2px;
+  background: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+.timeline .card:first-child::before { top: calc(1.55rem + 7px); }
+.timeline .card:last-child::before  { bottom: auto; height: calc(1.55rem + 7px); }
+/* bod na ose */
+.timeline .card::after {
+  content: "";
+  position: absolute;
+  left: var(--rail);
+  top: 1.55rem;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .timeline .card:hover {
-  transform: translateX(4px);
-  border-left-color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
   box-shadow: var(--shadow-hover);
+}
+.timeline .card:hover::after {
+  transform: translateX(-50%) scale(1.25);
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 0 0 2px var(--accent);
 }
 .timeline .card ul { margin-top: 0.6rem; margin-bottom: 0; }
 .timeline .card strong { font-size: 1.02rem; }
+.timeline .card p { margin: 0.5rem 0 0; font-size: 0.92rem; }
 
 .period {
   display: block;
@@ -541,6 +578,7 @@ footer a:hover { text-decoration: underline; }
   nav a { margin-right: 0.85rem; font-size: 0.8rem; }
   section { margin-top: 3.5rem; }
   .brand { display: none; }
+  .timeline { padding-left: 30px; --rail: -17px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
