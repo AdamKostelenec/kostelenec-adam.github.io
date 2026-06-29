@@ -552,3 +552,108 @@ footer a:hover { text-decoration: underline; }
   }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* ===========================================================
+   Vizuální prvky — odstíny, oddělovače, animace
+   =========================================================== */
+
+/* Plynule se pohybující světlo na pozadí */
+@media (prefers-reduced-motion: no-preference) {
+  body::before { animation: bgDrift 22s ease-in-out infinite alternate; }
+}
+@keyframes bgDrift {
+  from { transform: translate3d(-1%, 0, 0) scale(1); }
+  to   { transform: translate3d(2%, -2.5%, 0) scale(1.08); }
+}
+
+/* Ukazatel scrollování nahoře */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), #22c55e);
+  z-index: 200;
+  will-change: transform;
+}
+
+/* Jméno v hero s jemným přechodem */
+.hero h1 {
+  background: linear-gradient(115deg, var(--fg) 35%, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Eyebrow s vodicí linkou */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Dekorativní oddělovač mezi sekcemi */
+main > section:not(.hero)::before {
+  content: "";
+  display: block;
+  height: 10px;
+  margin: 0 auto 3.4rem;
+  background:
+    linear-gradient(90deg, transparent, var(--border) 25%, var(--border) 75%, transparent) center / 100% 1px no-repeat,
+    radial-gradient(circle at center, var(--accent) 0 3px, transparent 4px) center / 9px 9px no-repeat;
+}
+
+/* Animovaná linka pod nadpisem sekce */
+h2 { position: relative; }
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transition: width 0.6s ease 0.15s;
+}
+[data-reveal].is-visible h2::after { width: 56px; }
+
+/* Jemný přechod a hloubka karet */
+.card {
+  background-image: linear-gradient(180deg, var(--card), color-mix(in srgb, var(--card) 92%, var(--accent)));
+}
+
+.contact-card { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.contact-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+  box-shadow: var(--shadow-hover);
+}
+
+/* Postupné objevení karet uvnitř sekce */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] .projekt,
+  [data-reveal] .timeline .card {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  [data-reveal].is-visible .projekt,
+  [data-reveal].is-visible .timeline .card {
+    opacity: 1;
+    transform: none;
+  }
+  .is-visible .projekt:nth-child(2),
+  .is-visible .timeline .card:nth-child(2) { transition-delay: 0.1s; }
+  .is-visible .projekt:nth-child(3),
+  .is-visible .timeline .card:nth-child(3) { transition-delay: 0.2s; }
+  .is-visible .timeline .card:nth-child(4) { transition-delay: 0.3s; }
+}

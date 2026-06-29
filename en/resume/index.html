@@ -186,6 +186,18 @@ if ('IntersectionObserver' in window) {
 } else {
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
+
+/* Scroll progress bar */
+const progress = document.createElement('div');
+progress.className = 'scroll-progress';
+document.body.appendChild(progress);
+const updateProgress = () => {
+  const el = document.documentElement;
+  const max = el.scrollHeight - el.clientHeight;
+  progress.style.transform = 'scaleX(' + (max > 0 ? el.scrollTop / max : 0) + ')';
+};
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
 </script>
 </body>
 </html>
