@@ -366,7 +366,7 @@ img { display: block; max-width: 100%; }
 
 /* ====== FACEBOOK ====== */
 .facebook-section { padding: 110px 0; background: var(--white); }
-.facebook-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.facebook-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
 .facebook-card {
   background: var(--cream); border: 1px solid var(--sand);
   border-radius: var(--radius-lg); padding: 24px; overflow: hidden;
@@ -376,6 +376,7 @@ img { display: block; max-width: 100%; }
 .facebook-card .fb-page > span > iframe { width: 100% !important; }
 
 .facebook-side { display: flex; flex-direction: column; gap: 20px; }
+.facebook-side .facebook-info-card { flex: 1; display: flex; flex-direction: column; }
 .facebook-info-card {
   background: var(--cream); border: 1px solid var(--sand);
   border-radius: var(--radius-lg); padding: 32px; transition: all 0.35s ease;
@@ -455,7 +456,7 @@ img { display: block; max-width: 100%; }
 /* ====== FOOTER ====== */
 .site-footer { background: var(--text); padding: 40px 0; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.footer-logo-img { height: 48px; width: auto; filter: brightness(0) invert(1); opacity: 0.7; }
+.footer-logo-img { height: 48px; width: auto; border-radius: 8px; opacity: 0.85; }
 .footer-left { display: flex; align-items: center; gap: 16px; }
 .footer-left p { color: rgba(255,255,255,0.35); }
 .footer-right a { color: rgba(255,255,255,0.5); transition: color 0.2s ease; }
